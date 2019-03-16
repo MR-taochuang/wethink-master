@@ -21,7 +21,16 @@ $config=[
     // 配置缓存目录，需要拥有写权限
 ];
 
-$data=\Driver\Register::wechat()->Menu($config)->GetMenu();
+$options = [
+    'body' => '商品代购，消费100元',
+    'out_trade_no' => \Driver\Register::tools()->create_order_number(32),
+    'total_fee' => $data['real_price']* 100,
+    'openid' => 'opt4YxBGGGhHUlC_8ipBtoznaLoM',
+    'trade_type' => 'JSAPI',
+    'notify_url' => 'http://' .$_SERVER['HTTP_HOST'] .$_SERVER['SCRIPT_NAME']. '/api/goods/notify',
+    'spbill_create_ip' => $_SERVER['REMOTE_ADDR'],
+];
+$data=\Driver\Register::wechat($config)->WepayApi();
 echo '<pre>';
 print_r($data);exit;
 

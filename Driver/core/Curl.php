@@ -2,6 +2,7 @@
 
 namespace Driver\core;
 
+use Driver\third\Tool;
 
 /**
  * Class Curl
@@ -111,7 +112,8 @@ class Curl
     public function post($param = [])
     {
         curl_setopt(self::$curl, CURLOPT_POST, true);
-        curl_setopt(self::$curl, CURLOPT_POSTFIELDS, (is_array($param) || is_object($param)) ? http_build_query($param) : $param);
+        curl_setopt(self::$curl, CURLOPT_POSTFIELDS, Tool::_buildHttpData($param));
+
         return self::query();
     }
 
@@ -195,7 +197,7 @@ class Curl
      */
     public static function __callStatic($name, $arguments)
     {
-        return new Curl($arguments[0]??'');
+        return new Curl($arguments[0]);
     }
     /**
      * @param $field

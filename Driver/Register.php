@@ -13,8 +13,10 @@ namespace Driver;
  * @method \Driver\core\Curl curl() static 注册curl
  * @method \Driver\core\Encry encry() static 自定义加密类
  * @method \Driver\core\Rsa rsa() static rsa加密类
- * @method \Driver\core\Wechat wechat() static 微信开发类
+ * @method \Driver\core\Wechat wechat($config=[]) static 微信开发类
+ * @method \Driver\core\Tools tools() static 工具类
  * @method \Driver\third\Tool tool() static 注册第三方方法
+ * @method \Driver\third\MyCurlFile myCurlFile() static curl文件处理
  *
  */
 class Register {

@@ -646,7 +646,50 @@ class Api
         /**
          * 微信支付 API START
          */
-        'unifiedOrder'=>'https://api.mch.weixin.qq.com/pay/unifiedorder'
+        //微信统一下单接口
+        'unifiedOrder'=>'https://api.mch.weixin.qq.com/pay/unifiedorder',
+        //微信查询订单接口
+        'orderQuery'=>'https://api.mch.weixin.qq.com/pay/orderquery',
+        //关闭订单接口
+        'closeOrder'=>'https://api.mch.weixin.qq.com/pay/closeorder',
+        //申请退款
+        'refund'=>'https://api.mch.weixin.qq.com/secapi/pay/refund',
+        //查询退款
+        'refundQuery'=>'https://api.mch.weixin.qq.com/pay/refundquery',
+        //下载对账单
+        'downloadBill'=>'https://api.mch.weixin.qq.com/pay/downloadbill',
+        //刷卡支付 提交被扫支付API
+        'micropay'=>'https://api.mch.weixin.qq.com/pay/micropay',
+        //刷卡支付 撤销订单
+        'reverse'=>'https://api.mch.weixin.qq.com/secapi/pay/reverse',
+        //测速上报
+        'report'=>'https://api.mch.weixin.qq.com/payitil/report',
+        //刷卡支付 授权码查询openid
+        'AuthCode'=>'https://api.mch.weixin.qq.com/tools/authcodetoopenid',
+        //拉取订单评价数据
+        'OrderComment'=>'https://api.mch.weixin.qq.com/billcommentsp/batchquerycomment',
+        //发放代金券
+        'coupon'=>'https://api.mch.weixin.qq.com/mmpaymkttransfers/send_coupon',
+        //查询代金券批次
+        'queryStock'=>'https://api.mch.weixin.qq.com/mmpaymkttransfers/query_coupon_stock',
+        //查询代金券信息
+        'queryInfo'=>'https://api.mch.weixin.qq.com/mmpaymkttransfers/query_coupon_stock',
+        //发放红包
+        'RedPack'=>'https://api.mch.weixin.qq.com/mmpaymkttransfers/sendredpack',
+        //发放裂变红包
+        'GroupRedPack'=>'https://api.mch.weixin.qq.com/mmpaymkttransfers/sendgroupredpack',
+        //查询红包记录
+        'queryRedPack'=>'https://api.mch.weixin.qq.com/mmpaymkttransfers/gethbinfo',
+        //企业付款到零钱
+        'Transfers'=>'https://api.mch.weixin.qq.com/mmpaymkttransfers/promotion/transfers',
+        //查询企业付款到零钱
+        'queryTransfers'=>'https://api.mch.weixin.qq.com/mmpaymkttransfers/gettransferinfo',
+        //企业付款到银行卡
+        'TransfersBank'=>'https://api.mch.weixin.qq.com/mmpaysptrans/pay_bank',
+        //商户企业付款到银行卡操作进行结果查询
+        'queryTransfersBank'=>'https://api.mch.weixin.qq.com/mmpaysptrans/query_bank',
+        //获取文件签名
+        'getRsaContent'=>'https://fraud.mch.weixin.qq.com/risk/getpublickey'
         /**
          *微信支付 API END
          */
@@ -732,12 +775,9 @@ class Api
     {
         if ($this->type == 'json') {
             $data = \Driver\third\Tool::json2arr($this->data);
-
             return $data;
         } else {
-
             $data = \Driver\third\Tool::xml2arr($this->data);
-            $data['callback_run'] = $this->callback_run;
             return $data;
         }
     }

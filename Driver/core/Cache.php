@@ -69,7 +69,7 @@ class Cache
      * @return string
      * 生成缓存文件名
      */
-    protected static function create_name($name)
+    public static function create_name($name)
     {
         return self::cache_path() . md5($name) . '_#' . $name . '#';
     }

@@ -1,6 +1,7 @@
 <?php
 
 namespace Driver\third;
+use Driver\core\Cache;
 
 
 /**
@@ -13,6 +14,9 @@ namespace Driver\third;
  */
 
 class Tool {
+
+    public static $cache_curl;
+
     /**
      * 根据文件后缀获取文件MINE
      * @param array $ext 文件后缀
@@ -148,6 +152,48 @@ class Tool {
             $result['errmessage']=\Driver\core\Error::toMessage($result['errcode']);
         }
         return $result;
+    }
+
+    /**
+     * @param $data
+     * @param bool $build
+     * @return string
+     */
+    public static function _buildHttpData($data, $build = true)
+    {
+        if (!is_array($data)) return $data;
+        foreach ($data as $key => $value){
+            if (is_object($value) && $value instanceof \CURLFile) {
+                $build = false;
+            } elseif (is_object($value) && isset($value->datatype) && $value->datatype === 'MY_CURL_FILE') {
+                $build = false;
+                $mycurl = new MyCurlFile((array)$value);
+                $data[$key] = $mycurl->get();
+                array_push(self::$cache_curl, $mycurl->tempname);
+            } elseif (is_string($value) && class_exists('CURLFile', false) && stripos($value, '@') === 0) {
+                if (($filename = realpath(trim($value, '@'))) && file_exists($filename)) {
+                    $build = false;
+                    $data[$key] = self::createCurlFile($filename);
+                }
+            }
+        }
+
+        return $build ? http_build_query($data) : $data;
+    }
+
+    /**
+     * @param $name /文件名
+     * @param $content /文件内容
+     * @return array|string
+     * 写入文件
+     */
+    public static function pushFile($name, $content)
+    {
+        $file = Cache::create_name($name);
+        if (!file_put_contents($file, $content)) {
+            return ['code'=>400,'message'=>'local file write error.'];
+        }
+        return $file;
     }
 
 
