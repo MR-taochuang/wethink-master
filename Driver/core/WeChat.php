@@ -98,7 +98,7 @@ class Wechat
                 $class = "\\WeChat\\" . ucfirst(strtolower($name));
                 break;
         }
-        if (class_exists($class)) return new $class($arguments[0]);
+        if (class_exists($class)) return new $class($arguments[0]??'');
         throw new \Exception("Class '{$class}' not found");
     }
 
@@ -123,7 +123,7 @@ class Wechat
                 $class = "\\WeChat\\" . ucfirst(strtolower($name));
                 break;
         }
-        if (class_exists($class)) return new $class($arguments[0]);
+        if (class_exists($class)) return new $class($arguments[0]??'');
         throw new \Exception("Class '{$class}' not found");
     }
 

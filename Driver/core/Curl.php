@@ -195,7 +195,7 @@ class Curl
      */
     public static function __callStatic($name, $arguments)
     {
-        return new Curl($arguments[0]);
+        return new Curl($arguments[0]??'');
     }
     /**
      * @param $field
