@@ -29,10 +29,16 @@
     "ext-curl": "*",
     "ext-openssl": "*"
   },
-  "psr-4": {
-    "Driver\\": "Driver",
-    "WeChat\\": "WeChat",
-    "WeApi\\": "WeApi",
-    "WePay\\":"WePay"
+
+  "autoload": {
+    "classmap": [
+      "autoload.php"
+    ],
+    "psr-4": {
+      "Driver\\": "Driver",
+      "WeChat\\": "WeChat",
+      "WeApi\\": "WeApi",
+      "WePay\\": "WePay"
+    }
   }
 }
