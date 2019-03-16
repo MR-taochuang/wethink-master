@@ -1,7 +1,7 @@
 <?php
 
 namespace WeChat;
-use Driver\WeChat;
+use Driver\core\Wechat;
 
 
 /**
@@ -11,7 +11,7 @@ use Driver\WeChat;
  * @date 2019/1/7 9:20
  * 微信门店
  */
-class Weshop extends WeChat{
+class Weshop extends Wechat{
 
 
     /***

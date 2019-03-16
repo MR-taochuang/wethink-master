@@ -2,7 +2,7 @@
 
 namespace WeChat;
 
-use Driver\WeChat;
+use Driver\core\WeChat;
 
 /**
  * Class Wifi
@@ -11,7 +11,7 @@ use Driver\WeChat;
  * @date 2019/1/7 14:04
  * 微信wifi接口
  */
-class Wifi extends WeChat{
+class Wifi extends Wechat{
     /***
      * @param $callback_url
      * @return array

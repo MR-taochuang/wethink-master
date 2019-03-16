@@ -2,7 +2,7 @@
 
 namespace WeApi;
 
-use Driver\WeChat;
+use Driver\core\Wechat;
 
 /**
  * Class Qrcode
@@ -11,7 +11,7 @@ use Driver\WeChat;
  * @date 2019/1/10 16:48
  * 小程序二维码管理
  */
-class Qrcode extends WeChat{
+class Qrcode extends Wechat{
 
     /**
      * 获取小程序二维码，适用于需要的码数量较少的业务场景。通过该接口生成的小程序码，永久有效，有数量限制

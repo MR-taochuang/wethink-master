@@ -1,7 +1,7 @@
 <?php
 namespace WeChat;
 
-use Driver\WeChat;
+use Driver\core\WeChat;
 
 /**
  * Class Invoice
@@ -10,7 +10,7 @@ use Driver\WeChat;
  * @date 2019/1/7 14:05
  * 微信发票
  */
-class Invoice extends WeChat{
+class Invoice extends Wechat{
     /***
      * @return array
      * 获取授权页ticket

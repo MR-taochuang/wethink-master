@@ -2,7 +2,7 @@
 
 namespace WeApi;
 
-use Driver\WeChat;
+use Driver\core\Wechat;
 
 /**
  * Class Summary
@@ -11,7 +11,7 @@ use Driver\WeChat;
  * @date 2019/1/9 17:06
  * 小程序数据分析
  */
-class Summary extends WeChat{
+class Summary extends Wechat{
 
     /**
      * 获取用户访问小程序日留存

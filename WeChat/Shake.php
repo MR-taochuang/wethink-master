@@ -3,7 +3,7 @@
 namespace WeChat;
 
 
-use Driver\WeChat;
+use Driver\core\Wechat;
 
 /**
  * Class Shake
@@ -12,7 +12,7 @@ use Driver\WeChat;
  * @date 2019/1/7 13:53
  * 微信摇一摇
  */
-class Shake extends WeChat{
+class Shake extends Wechat{
     /***
      * @param $options
      * @return array

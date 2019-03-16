@@ -2,7 +2,7 @@
 
 namespace WeApi;
 
-use Driver\WeChat;
+use Driver\core\Wechat;
 
 /**
  * Class Template
@@ -11,7 +11,7 @@ use Driver\WeChat;
  * @date 2019/1/9 16:22
  * 微信小程序模板消息
  */
-class Template extends WeChat{
+class Template extends Wechat{
 
     /**
      * 获取小程序模板库标题列表

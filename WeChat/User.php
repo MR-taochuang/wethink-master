@@ -2,8 +2,8 @@
 
 namespace WeChat;
 
-use Driver\Tool;
-use Driver\WeChat;
+use Driver\third\Tool;
+use Driver\core\Wechat;
 
 /**
  * Class User
@@ -12,7 +12,7 @@ use Driver\WeChat;
  * @date 2018/12/27 14:32
  * 微信网页开发授权
  */
-class User extends WeChat
+class User extends Wechat
 {
 
     /**

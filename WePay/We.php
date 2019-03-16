@@ -4,7 +4,7 @@ namespace WePay;
 
 
 use Driver\Register;
-use Driver\WeChat;
+use Driver\core\Wechat;
 
 /**
  * Class We
@@ -13,7 +13,7 @@ use Driver\WeChat;
  * @date 2019/1/11 16:55
  * 支付配置接口
  */
-class We extends WeChat
+class We extends Wechat
 {
 
     public function doParam(&$options, $type = "wechat")

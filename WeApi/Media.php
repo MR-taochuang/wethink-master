@@ -2,7 +2,7 @@
 
 namespace WeApi;
 
-use Driver\WeChat;
+use Driver\core\Wechat;
 
 /**
  * Class Media
@@ -11,7 +11,7 @@ use Driver\WeChat;
  * @date 2019/1/9 16:42
  * 微信小程序素材管理
  */
-class Media extends WeChat{
+class Media extends Wechat{
 
     /**
      * 把媒体文件上传到微信服务器。目前仅支持图片。用于发送客服消息或被动回复用户消息。

@@ -4,7 +4,7 @@ namespace WeApi;
 
 
 use Driver\Register;
-use Driver\WeChat;
+use Driver\core\Wechat;
 
 /**
  * Class We
@@ -13,7 +13,7 @@ use Driver\WeChat;
  * @date 2019/1/9 16:12
  * 微信小程序基础类
  */
-class We extends WeChat
+class We extends Wechat
 {
 
 

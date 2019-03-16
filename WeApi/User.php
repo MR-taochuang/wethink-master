@@ -3,8 +3,8 @@
 namespace WeApi;
 
 use Driver\Register;
-use Driver\Tool;
-use Driver\WeChat;
+use Driver\third\Tool;
+use Driver\core\Wechat;
 
 /**
  * Class User
@@ -13,7 +13,7 @@ use Driver\WeChat;
  * @date 2019/1/9 14:01
  * 微信小程序用户信息处理
  */
-class User extends WeChat
+class User extends Wechat
 {
 
     /**

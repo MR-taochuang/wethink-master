@@ -2,7 +2,7 @@
 
 namespace WeChat;
 
-use Driver\WeChat;
+use Driver\core\Wechat;
 
 /**
  * Class Qrcode
@@ -11,7 +11,7 @@ use Driver\WeChat;
  * @date 2018/12/29 14:43
  * 微信二维码管理
  */
-class Qrcode extends WeChat{
+class Qrcode extends Wechat{
 
     /**
      * @param $scene

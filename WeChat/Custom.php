@@ -2,8 +2,8 @@
 
 namespace WeChat;
 
-use Driver\WeChat;
-use Driver\Tool;
+use Driver\core\Wechat;
+use Driver\third\Tool;
 
 /**
  * Class Custom
@@ -12,7 +12,7 @@ use Driver\Tool;
  * @date 2018/12/26 17:44
  * 客服发送消息
  */
-class Custom extends WeChat{
+class Custom extends Wechat{
     /**
      * @param $options
      * @return array

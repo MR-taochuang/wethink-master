@@ -2,7 +2,7 @@
 
 namespace WeChat;
 
-use Driver\WeChat;
+use Driver\core\Wechat;
 
 /**
  * Class Summary
@@ -11,7 +11,7 @@ use Driver\WeChat;
  * @date 2018/12/29 14:44
  * 微信数据统计
  */
-class Summary extends WeChat
+class Summary extends Wechat
 {
 
     /**

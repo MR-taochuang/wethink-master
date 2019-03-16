@@ -1,9 +1,9 @@
 <?php
 
-namespace WeChat;
+namespace Wechat;
 
-use Driver\Tool;
-use Driver\WeChat;
+use Driver\third\Tool;
+use Driver\core\Wechat;
 
 /**
  * Class Menu
@@ -13,7 +13,7 @@ use Driver\WeChat;
  * 微信菜单处理
  */
 
-class Menu extends WeChat{
+class Menu extends Wechat{
 
     /**
      * @param array $options 菜单参数

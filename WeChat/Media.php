@@ -1,9 +1,9 @@
 <?php
 
-namespace WeChat;
+namespace Wechat;
 
-use Driver\Tool;
-use Driver\WeChat;
+use Driver\third\Tool;
+use Driver\core\Wechat;
 
 /**
  * Class Media
@@ -12,7 +12,7 @@ use Driver\WeChat;
  * @date 2018/12/26 18:15
  *微信素材管理
  */
-class Media extends WeChat
+class Media extends Wechat
 {
 
 

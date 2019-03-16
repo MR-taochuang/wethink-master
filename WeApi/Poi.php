@@ -2,7 +2,7 @@
 
 namespace WeApi;
 
-use Driver\WeChat;
+use Driver\core\Wechat;
 
 /**
  * Class Poi
@@ -11,7 +11,7 @@ use Driver\WeChat;
  * @date 2019/1/9 17:48
  * 微信小程序地点管理
  */
-class Poi extends WeChat
+class Poi extends Wechat
 {
 
     /**

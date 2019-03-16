@@ -2,8 +2,8 @@
 
 namespace WeChat;
 
-use Driver\Tool;
-use Driver\WeChat;
+use Driver\third\Tool;
+use Driver\Wechat;
 
 /**
  * Class Init
@@ -12,7 +12,7 @@ use Driver\WeChat;
  * @date 2018/12/21 16:07
  *微信初始
  */
-class Init extends WeChat
+class Init extends Wechat
 {
     /**
      * @return array

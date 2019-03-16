@@ -1,9 +1,9 @@
 <?php
 
-namespace WeChat;
+namespace Wechat;
 
-use Driver\Tool;
-use Driver\WeChat;
+use Driver\third\Tool;
+use Driver\Wechat;
 
 /**
  * Class Template
@@ -12,7 +12,7 @@ use Driver\WeChat;
  * @date 2018/12/27 14:34
  * 微信模板消息
  */
-class Template extends WeChat{
+class Template extends Wechat{
 
 
     /**

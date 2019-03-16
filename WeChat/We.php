@@ -2,8 +2,8 @@
 
 namespace WeChat;
 
-use Driver\Tool;
-use Driver\WeChat;
+use Driver\third\Tool;
+use Driver\core\Wechat;
 
 /**
  * Class We
@@ -12,7 +12,7 @@ use Driver\WeChat;
  * @date 2018/12/21 16:07
  *微信基础类
  */
-class We extends WeChat
+class We extends Wechat
 {
     /**
      * @return array

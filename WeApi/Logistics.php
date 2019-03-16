@@ -2,7 +2,7 @@
 
 namespace WeApi;
 
-use Driver\WeChat;
+use Driver\core\Wechat;
 
 /**
  * Class Logistics
@@ -11,7 +11,7 @@ use Driver\WeChat;
  * @date 2019/1/10 17:26
  * 微信小程序物流助手
  */
-class Logistics extends WeChat{
+class Logistics extends Wechat{
 
 
     /**

@@ -2,8 +2,8 @@
 
 namespace WeChat;
 
-use Driver\WeChat;
-use Driver\Tool;
+use Driver\core\Wechat;
+use Driver\third\Tool;
 
 /**
  * Class Kfaccount
@@ -12,7 +12,7 @@ use Driver\Tool;
  * @date 2018/12/26 16:31
  * 客服管理
  */
-class Kfaccount extends WeChat{
+class Kfaccount extends Wechat{
 
     /**
      * @param array $options

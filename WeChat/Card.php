@@ -2,7 +2,7 @@
 
 namespace WeChat;
 
-use Driver\WeChat;
+use Driver\core\Wechat;
 
 /**
  * Class Card
@@ -11,7 +11,7 @@ use Driver\WeChat;
  * @date 2018/12/29 18:48
  * 卡劵管理
  */
-class Card extends WeChat
+class Card extends Wechat
 {
 
     /**

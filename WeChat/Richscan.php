@@ -2,7 +2,7 @@
 
 namespace WeChat;
 
-use Driver\WeChat;
+use Driver\core\Wechat;
 
 
 /**
@@ -12,7 +12,7 @@ use Driver\WeChat;
  * @date 2019/1/7 14:00
  * 微信扫一扫
  */
-class Richscan extends WeChat{
+class Richscan extends Wechat{
     /***
      * @return array
      * /获取商户信息

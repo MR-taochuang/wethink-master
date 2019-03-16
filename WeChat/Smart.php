@@ -1,7 +1,7 @@
 <?php
 
 namespace WeChat;
-use Driver\WeChat;
+use Driver\core\Wechat;
 
 /**
  * Class Smart
@@ -10,7 +10,7 @@ use Driver\WeChat;
  * @date 2019/1/7 10:27
  * 微信智能接口
  */
-class Smart extends WeChat{
+class Smart extends Wechat{
     /***
      * @param $options
      * @return array

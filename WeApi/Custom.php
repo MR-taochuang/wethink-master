@@ -2,7 +2,7 @@
 
 namespace WeApi;
 
-use Driver\WeChat;
+use Driver\core\Wechat;
 
 /**
  * Class Custom
@@ -12,7 +12,7 @@ use Driver\WeChat;
  * 小程序客服发送消息
  */
 
-class Custom extends WeChat{
+class Custom extends Wechat{
 
     /**
      * 下发客服当前输入状态给用户

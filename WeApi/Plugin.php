@@ -2,7 +2,7 @@
 
 namespace WeApi;
 
-use Driver\WeChat;
+use Driver\core\Wechat;
 
 /**
  * Class Plugin
@@ -11,7 +11,7 @@ use Driver\WeChat;
  * @date 2019/1/9 17:35
  * 小程序插件管理
  */
-class Plugin extends WeChat{
+class Plugin extends Wechat{
 
     /**
      * 向插件开发者发起使用插件的申请
