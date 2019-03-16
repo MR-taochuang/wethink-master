@@ -186,7 +186,7 @@ class Curl
      */
     public function __call($name, $arguments)
     {
-        return call_user_func_array([$this, self::CONFIG], [$name, $arguments[0]]);
+        return call_user_func_array([$this, self::CONFIG], [$name, $arguments[0]??'']);
     }
 
     /**
@@ -197,7 +197,7 @@ class Curl
      */
     public static function __callStatic($name, $arguments)
     {
-        return new Curl($arguments[0]);
+        return new Curl($arguments[0]??'');
     }
     /**
      * @param $field
