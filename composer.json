@@ -1,8 +1,8 @@
 {
   "type": "library",
-  "name": "mr.taochuang/wechat-master",
-  "homepage": "https://github.com/1826598123/mr.taochuang-wechat-master.git",
-  "description": "PHP WeChat WeApi WePay develop",
+  "name": "mr.taochuang/wethink-master",
+  "homepage": "https://github.com/MR-taochuang/wethink-master.git",
+  "description": "PHP Wethink",
   "license": "MIT",
   "authors": [
     {
