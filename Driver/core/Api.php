@@ -732,7 +732,7 @@ class Api
     {
         if ($this->type == 'json') {
             $data = \Driver\third\Tool::json2arr($this->data);
-            $data['callback_run'] = $this->callback_run;
+
             return $data;
         } else {
 

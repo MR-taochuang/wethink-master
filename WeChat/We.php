@@ -98,7 +98,7 @@ class We extends Wechat
             \Driver\Register::cache()->set('access_token', $access_token);
             return $access_token;
         } else {
-            $res = self::instance(__FUNCTION__)->run()->get()->toArray();
+            $res = self::instance("AccessToken")->run()->get()->toArray();
             if (!empty($res['access_token'])) {
                 \Driver\Register::cache()->set('WeApiAccessToken', $res['access_token'], 7000);
                 \Driver\Register::cache()->set('access_token', $res['access_token']);

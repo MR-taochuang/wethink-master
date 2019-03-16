@@ -2,7 +2,7 @@
 
 namespace Driver\core;
 
-
+use Driver\Register;
 /**
  * Class WeChat
  * @package Driver
@@ -49,7 +49,7 @@ namespace Driver\core;
  * @method \WePay\Pay WepayPay($config=[]) static 微信支付
  * ---------------微信支付操作类-------------------
  */
-class WeChat
+class Wechat
 {
     /**
      * @var array
@@ -74,6 +74,7 @@ class WeChat
      */
     public static function instance($url = '')
     {
+
         return self::$config->registerUrl($url);
     }
 
