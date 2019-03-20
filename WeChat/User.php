@@ -35,10 +35,7 @@ class User extends Wechat
      */
     public function UserAccessToken($code)
     {
-        return self::instance(__FUNCTION__)->run(self::$config->set('code', $code),
-            function($this,$data){
-            $this->set_config();
-        })->get()->toArray();
+        return self::instance(__FUNCTION__)->run(self::$config->set('code', $code))->get()->toArray();
 
     }
 

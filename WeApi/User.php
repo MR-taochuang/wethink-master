@@ -37,9 +37,9 @@ class User extends Wechat
     {
         $result = self::Code2Session($code);
         if (empty($result['session_key'])) throw new \Exception('Code 换取 SessionKey 失败', 403);
-        $crypt = new \Encry\WXBizDataCrypt(self::$config->get('weapiappid'), $result['session_key']);
+        $crypt = new \Driver\encry\WXBizDataCrypt(self::$config->get('weapiappid'), $result['session_key']);
         $err_code = $crypt->decryptData($encryptedData, $iv, $data);
         if ($err_code != 0) throw  new \Exception('解析失败', 403);
-        return array_merge($result, Register::tool()->json2arr($data));
+        return array_merge($result, Register::third()->tool()->json2arr($data));
     }
 }
