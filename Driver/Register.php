@@ -12,7 +12,7 @@ namespace Driver;
  * @method \Driver\core\Cache cache() static 注册缓存
  * @method \Driver\core\Curl curl() static 注册curl
  * @method \Driver\core\Encry encry() static 自定义加密类
- * @method \Driver\core\Rsa rsa() static rsa加密类
+ * @method \Driver\core\Rsa rsa($config) static rsa加密类
  * @method \Driver\core\Wechat wechat($config = []) static 微信开发类
  * @method \Driver\core\Tools tools() static 工具类
  * @method \Driver\core\Aliyun aliyun() static aliyun处理
@@ -24,13 +24,13 @@ class Register
     public static function __callStatic($name, $arguments)
     {
         $class = '\\Driver\\core\\' . ucwords(strtolower($name));
-        return new $class($arguments[0]??'');
+        return (new \ReflectionClass($class))->newInstanceArgs($arguments);
     }
 
     public function __call($name, $arguments)
     {
         $class = '\\Driver\\core\\' . ucwords(strtolower($name));
-        return new $class($arguments[0]??'');
+        return (new \ReflectionClass($class))->newInstanceArgs($arguments);
     }
 
 }

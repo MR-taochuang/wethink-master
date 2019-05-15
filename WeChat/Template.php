@@ -3,7 +3,7 @@
 namespace Wechat;
 
 use Driver\third\Tool;
-use Driver\Wechat;
+use Driver\core\Wechat;
 
 /**
  * Class Template

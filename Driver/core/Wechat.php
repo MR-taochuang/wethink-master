@@ -46,7 +46,7 @@ use Driver\Register;
  *
  * ---------------微信支付操作类-------------------
  * @method \WePay\We  WepayWe($config = []) static 微信支付基础类
- * @method \WePay\Pay WepayPay($config=[]) static 微信支付
+ * @method \WePay\Api WepayApi($config=[]) static 微信支付
  * ---------------微信支付操作类-------------------
  */
 class Wechat
@@ -98,7 +98,7 @@ class Wechat
                 $class = "\\WeChat\\" . ucfirst(strtolower($name));
                 break;
         }
-        if (class_exists($class)) return new $class($arguments[0]??'');
+        if (class_exists($class)) return (new \ReflectionClass($class))->newInstanceArgs($arguments);
         throw new \Exception("Class '{$class}' not found");
     }
 
@@ -123,7 +123,7 @@ class Wechat
                 $class = "\\WeChat\\" . ucfirst(strtolower($name));
                 break;
         }
-        if (class_exists($class)) return new $class($arguments[0]??'');
+        if (class_exists($class)) return (new \ReflectionClass($class))->newInstanceArgs($arguments);
         throw new \Exception("Class '{$class}' not found");
     }
 

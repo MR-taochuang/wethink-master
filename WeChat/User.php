@@ -118,7 +118,7 @@ class User extends Wechat
      */
     public function UserTagsFans()
     {
-        return self::instance(__FUNCTION__)->run(self::GetAccessToken())->get()->toArray();
+        return self::instance(__FUNCTION__)->run(self::GetAccessToken())->post()->toArray();
     }
 
 
@@ -146,9 +146,9 @@ class User extends Wechat
      * @return array
      * 获取用户身上的标签列表
      */
-    public function UserTagslist()
+    public function UserTagslist($openid)
     {
-        return self::instance(__FUNCTION__)->run(self::GetAccessToken())->get()->toArray();
+        return self::instance(__FUNCTION__)->run(self::GetAccessToken())->post(['openid'=>$openid])->toArray();
     }
 
     /**

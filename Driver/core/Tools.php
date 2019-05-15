@@ -28,10 +28,10 @@ class Tools {
         $rand = '';
         $num = floor($digits / 10);
         for ($i = 0; $i < $num; $i++) {
-            $rand .= str_pad(mt_rand(1, 9999999999), 10, '0', STR_PAD_LEFT);
+            $rand .= str_pad(mt_rand(1, (int)9999999999), 10, '0', STR_PAD_LEFT);
         }
         if ($digits % 10 != 0) {
-            $rand .= str_pad(mt_rand(1, substr(9999999999, 0, $digits - ($num * 10))), $digits - ($num * 10), '0', STR_PAD_LEFT);
+            $rand .= str_pad(mt_rand(1, (int)substr(9999999999, 0, $digits - ($num * 10))), $digits - ($num * 10), '0', STR_PAD_LEFT);
         }
         $order_number = $prefix . $date . $rand;
         return $order_number;

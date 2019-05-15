@@ -32,10 +32,18 @@ class We extends Wechat
         if ($type == 'weapi') $field = 'weapiappid';
         $options['appid'] = self::$config[$field];
         $options['mch_id']=self::$config['mch_id'];
-        $options['nonce_str']=Register::tool()->createNoncestr();
-        $options['sign_type']=$sign_type;
+        $options['nonce_str']=Register::third()->tool()->createNoncestr();
         $options['sign']=self::get_pay_sign($options);
+    }
 
+    /**
+     * @param $options
+     * 生成签名数据
+     */
+    public function doSign(&$options){
+        $options['mch_id']=self::$config['mch_id'];
+        $options['nonce_str']=Register::third()->tool()->createNoncestr();
+        $options['sign']=self::get_pay_sign($options);
     }
 
     /**
@@ -50,7 +58,7 @@ class We extends Wechat
         if ($type == 'weapi') $field = 'weapiappid';
         $options["appId"] = self::$config[$field];
         $options["timeStamp"] = (string)time();
-        $options["nonceStr"] = Register::tool()->createNoncestr();
+        $options["nonceStr"] = Register::third()->tool()->createNoncestr();
         $options["package"] = "prepay_id={$prepayId}";
         $options["signType"] = "MD5";
         $options["paySign"] = self::get_pay_sign($options);
@@ -68,8 +76,8 @@ class We extends Wechat
     {
         $options['appid'] = self::$config['appid'];
         $options['mch_id']=self::$config['mch_id'];
-        $options['time_stamp']=(string)Register::tools()->system_time();
-        $options['nonce_str']=Register::tool()->createNoncestr();
+        $options['time_stamp']=(string)Register::third()->tools()->system_time();
+        $options['nonce_str']=Register::third()->tool()->createNoncestr();
         $options['product_id']=$product_id;
         $options['sign']=self::get_pay_sign($options);
         return "weixin://wxpay/bizpayurl?" . http_build_query($options);
@@ -87,8 +95,8 @@ class We extends Wechat
         $options['partnerid']=self::$config['mch_id'];
         $options['prepayid']=(string)$prepayid;
         $options['package']='Sign=WXPay';
-        $options['timestamp']=(string)Register::tools()->system_time();
-        $options['noncestr']=Register::tool()->createNoncestr();
+        $options['timestamp']=(string)Register::third()->tools()->system_time();
+        $options['noncestr']=Register::third()->tool()->createNoncestr();
         $options['sign']=self::get_pay_sign($options);
         return $options;
     }

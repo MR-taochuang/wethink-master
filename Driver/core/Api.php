@@ -172,7 +172,7 @@ class Api
         'UserTagsMembers' => 'https://api.weixin.qq.com/cgi-bin/tags/members/batchtagging?access_token=ACCESS_TOKEN',
         //批量为用户取消标签 请求方式 POST
         'UserTagsUnmembers' => 'https://api.weixin.qq.com/cgi-bin/tags/members/batchuntagging?access_token=ACCESS_TOKEN',
-        //获取用户身上的标签列表 请求方式 GET
+        //获取用户身上的标签列表 请求方式 POST
         'UserTagslist' => 'https://api.weixin.qq.com/cgi-bin/tags/getidlist?access_token=ACCESS_TOKEN',
         //设置用户备注名 请求方式 POST
         'UserSetRemark' => 'https://api.weixin.qq.com/cgi-bin/user/info/updateremark?access_token=ACCESS_TOKEN',
@@ -279,265 +279,265 @@ class Api
         //拉取单张会员卡数据接口 请求方式 POST
         'GetCardMemberCardDetails' => 'https://api.weixin.qq.com/datacube/getcardmembercarddetail?access_token=ACCESS_TOKEN',
         //创建卡公众号的token 请求方式 POST
-        'CardGeturl'=>'https://api.weixin.qq.com/card/membercard/activate/geturl?access_token=ACCESS_TOKEN',
+        'CardGeturl' => 'https://api.weixin.qq.com/card/membercard/activate/geturl?access_token=ACCESS_TOKEN',
         //获取用户开卡时提交的信息（跳转型开卡组件） 请求方式 POST
-        'CardSubmitInfoJump'=>'https://api.weixin.qq.com/card/membercard/activatetempinfo/get?access_token=ACCESS_TOKEN',
+        'CardSubmitInfoJump' => 'https://api.weixin.qq.com/card/membercard/activatetempinfo/get?access_token=ACCESS_TOKEN',
         //获取用户开卡时提交的信息（非跳转型开卡组件）
-        'CardSubmitInfo'=>'https://api.weixin.qq.com/card/code/get?access_token=ACCESS_TOKEN',
+        'CardSubmitInfo' => 'https://api.weixin.qq.com/card/code/get?access_token=ACCESS_TOKEN',
         //激活用户领取的会员卡（跳转型开卡组件）
-        'CardActivate'=>'https://api.weixin.qq.com/card/membercard/activate?access_token=ACCESS_TOKEN',
+        'CardActivate' => 'https://api.weixin.qq.com/card/membercard/activate?access_token=ACCESS_TOKEN',
         //创建子商户接口 请求方式 POST
         'SubmerChantCreate' => 'https://api.weixin.qq.com/card/submerchant/submit?access_token=ACCESS_TOKEN',
         //卡券开放类目查询接口 请求方式get
-        'GetApplyProtocol'=>'https://api.weixin.qq.com/card/getapplyprotocol?access_token=ACCESS_TOKEN',
+        'GetApplyProtocol' => 'https://api.weixin.qq.com/card/getapplyprotocol?access_token=ACCESS_TOKEN',
         //更新子商户接口,请求方式post
-        'SubmerChantUpdate'=>'https://api.weixin.qq.com/card/submerchant/update?access_token=ACCESS_TOKEN',
+        'SubmerChantUpdate' => 'https://api.weixin.qq.com/card/submerchant/update?access_token=ACCESS_TOKEN',
         //拉取单个子商户信息接口 请求方式post
-        'GetSubmerChant'=>'https://api.weixin.qq.com/card/submerchant/get?access_token=ACCESS_TOKEN',
+        'GetSubmerChant' => 'https://api.weixin.qq.com/card/submerchant/get?access_token=ACCESS_TOKEN',
         //批量拉取子商户信息接口 请求方式post
-        'BatchGetSubmerChant'=>'https://api.weixin.qq.com/card/submerchant/batchget?access_token=ACCESS_TOKEN',
+        'BatchGetSubmerChant' => 'https://api.weixin.qq.com/card/submerchant/batchget?access_token=ACCESS_TOKEN',
         //母商户资质申请接口 请求方式post
-        'UploadCardAgent'=>'http://api.weixin.qq.com/cgi-bin/component/upload_card_agent_qualification?access_token=ACCESS_TOKEN',
+        'UploadCardAgent' => 'http://api.weixin.qq.com/cgi-bin/component/upload_card_agent_qualification?access_token=ACCESS_TOKEN',
         //母商户资质审核查询接口 请求方式get
-        'CheckCardAgent'=>'http://api.weixin.qq.com/cgi-bin/component/check_card_agent_qualification?access_token=ACCESS_TOKEN',
+        'CheckCardAgent' => 'http://api.weixin.qq.com/cgi-bin/component/check_card_agent_qualification?access_token=ACCESS_TOKEN',
         //子商户资质申请接口 请求方式 post
-        'UploadCardMerchant'=>'http://api.weixin.qq.com/cgi-bin/component/upload_card_merchant_qualification?access_token=ACCESS_TOKEN',
+        'UploadCardMerchant' => 'http://api.weixin.qq.com/cgi-bin/component/upload_card_merchant_qualification?access_token=ACCESS_TOKEN',
         //子商户资质审核查询接口 请求方式post
-        'CheckCardMerchant'=>'http://api.weixin.qq.com/cgi-bin/component/check_card_merchant_qualification?access_token=ACCESS_TOKEN',
+        'CheckCardMerchant' => 'http://api.weixin.qq.com/cgi-bin/component/check_card_merchant_qualification?access_token=ACCESS_TOKEN',
         //拉取单个子商户信息接口 请求方式 post 通过指定的子商户appid，拉取该子商户的基础信息。 注意，用母商户去调用接口，但接口内传入的是子商户的appid。
-        'GetCardMerchant'=>'http://api.weixin.qq.com/cgi-bin/component/get_card_merchant?access_token=ACCESS_TOKEN',
+        'GetCardMerchant' => 'http://api.weixin.qq.com/cgi-bin/component/get_card_merchant?access_token=ACCESS_TOKEN',
         //拉取子商户列表接口 请求方式post
-        'BatchgetCardMerchant'=>'http://api.weixin.qq.com/cgi-bin/component/batchget_card_merchant?access_token=ACCESS_TOKEN',
+        'BatchgetCardMerchant' => 'http://api.weixin.qq.com/cgi-bin/component/batchget_card_merchant?access_token=ACCESS_TOKEN',
         //第三方强授权相关接口 请求方式post
-        'ApiQueryAuth'=>'https://api.weixin.qq.com/cgi-bin/component/api_query_auth?component_access_token=ACCESS_TOKEN',
+        'ApiQueryAuth' => 'https://api.weixin.qq.com/cgi-bin/component/api_query_auth?component_access_token=ACCESS_TOKEN',
         //确认授权 请求方式post
-        'ApiConfirm'=>'https://api.weixin.qq.com/cgi-bin/component/api_confirm_authorization?component_access_token=ACCESS_TOKEN',
+        'ApiConfirm' => 'https://api.weixin.qq.com/cgi-bin/component/api_confirm_authorization?component_access_token=ACCESS_TOKEN',
         //获取授权方的账户信息 请求方式post
-        'ApiGetAuthorizer'=>'https://api.weixin.qq.com/cgi-bin/component/api_get_authorizer_info?component_access_token=ACCESS_TOKEN',
+        'ApiGetAuthorizer' => 'https://api.weixin.qq.com/cgi-bin/component/api_get_authorizer_info?component_access_token=ACCESS_TOKEN',
         //创建门店接口 请求方式post
-        'AddPoi'=>'http://api.weixin.qq.com/cgi-bin/poi/addpoi?access_token=ACCESS_TOKEN',
+        'AddPoi' => 'http://api.weixin.qq.com/cgi-bin/poi/addpoi?access_token=ACCESS_TOKEN',
         //查询门店信息 请求方式post
-        'GetPoi'=>'http://api.weixin.qq.com/cgi-bin/poi/getpoi?access_token=ACCESS_TOKEN',
+        'GetPoi' => 'http://api.weixin.qq.com/cgi-bin/poi/getpoi?access_token=ACCESS_TOKEN',
         //查询门店列表 请求方式post
-        'GetPoiList'=>'https://api.weixin.qq.com/cgi-bin/poi/getpoilist?access_token=ACCESS_TOKEN',
+        'GetPoiList' => 'https://api.weixin.qq.com/cgi-bin/poi/getpoilist?access_token=ACCESS_TOKEN',
         //修改门店服务信息 请求方式POST/FROM
-        'UpdatePoi'=>'https://api.weixin.qq.com/cgi-bin/poi/updatepoi?access_token=ACCESS_TOKEN',
+        'UpdatePoi' => 'https://api.weixin.qq.com/cgi-bin/poi/updatepoi?access_token=ACCESS_TOKEN',
         //删除门店 请求方式POST/FROM
-        'DelPoi'=>'https://api.weixin.qq.com/cgi-bin/poi/delpoi?access_token=ACCESS_TOKEN',
+        'DelPoi' => 'https://api.weixin.qq.com/cgi-bin/poi/delpoi?access_token=ACCESS_TOKEN',
         //门店类目表 请求方式get
-        'GetWxCategory'=>'http://api.weixin.qq.com/cgi-bin/poi/getwxcategory?access_token=ACCESS_TOKEN',
+        'GetWxCategory' => 'http://api.weixin.qq.com/cgi-bin/poi/getwxcategory?access_token=ACCESS_TOKEN',
         //拉取门店小程序类目 请求方式get
-        'GetMerchantCategory'=>'https://api.weixin.qq.com/wxa/get_merchant_category?access_token=ACCESS_TOKEN',
+        'GetMerchantCategory' => 'https://api.weixin.qq.com/wxa/get_merchant_category?access_token=ACCESS_TOKEN',
         //创建门店小程序 请求方式POST (请使用https协议)
-        'ApplyMerchant'=>'https://api.weixin.qq.com/wxa/apply_merchant?access_token=ACCESS_TOKEN',
+        'ApplyMerchant' => 'https://api.weixin.qq.com/wxa/apply_merchant?access_token=ACCESS_TOKEN',
         //查询门店小程序审核结果 请求方式get
-        'GetMerchantAuditInfo'=>'https://api.weixin.qq.com/wxa/get_merchant_audit_info?access_token=ACCESS_TOKEN',
+        'GetMerchantAuditInfo' => 'https://api.weixin.qq.com/wxa/get_merchant_audit_info?access_token=ACCESS_TOKEN',
         //修改门店小程序信息 请求方式POST
-        'ModifyMerchant'=>'https://api.weixin.qq.com/wxa/modify_merchant?access_token=ACCESS_TOKEN',
+        'ModifyMerchant' => 'https://api.weixin.qq.com/wxa/modify_merchant?access_token=ACCESS_TOKEN',
         //从腾讯地图拉取省市区信息 请求方式get
-        'GetDistrict'=>'https://api.weixin.qq.com/wxa/get_district?access_token=ACCESS_TOKEN',
+        'GetDistrict' => 'https://api.weixin.qq.com/wxa/get_district?access_token=ACCESS_TOKEN',
         //在腾讯地图中搜索门店 请求方式POST
-        'SearchMapPoi'=>'https://api.weixin.qq.com/wxa/search_map_poi?access_token=ACCESS_TOKEN',
+        'SearchMapPoi' => 'https://api.weixin.qq.com/wxa/search_map_poi?access_token=ACCESS_TOKEN',
         //在腾讯地图中创建门店 请求方式POST
-        'CreateMapPoi'=>'https://api.weixin.qq.com/wxa/create_map_poi?access_token=ACCESS_TOKEN',
+        'CreateMapPoi' => 'https://api.weixin.qq.com/wxa/create_map_poi?access_token=ACCESS_TOKEN',
         //添加门店 请求方式POST
-        'AddStore'=>'https://api.weixin.qq.com/wxa/add_store?access_token=ACCESS_TOKEN',
+        'AddStore' => 'https://api.weixin.qq.com/wxa/add_store?access_token=ACCESS_TOKEN',
         //更新门店信息 请求方式POST
-        'UpdateStore'=>'https://api.weixin.qq.com/wxa/update_store?access_token=ACCESS_TOKEN',
+        'UpdateStore' => 'https://api.weixin.qq.com/wxa/update_store?access_token=ACCESS_TOKEN',
         //获取单个门店信息 请求方式POST
-        'GetStoreInfo'=>'https://api.weixin.qq.com/wxa/get_store_info?access_token=ACCESS_TOKEN',
+        'GetStoreInfo' => 'https://api.weixin.qq.com/wxa/get_store_info?access_token=ACCESS_TOKEN',
         //删除门店 请求方式POST
-        'DelStore'=>'https://api.weixin.qq.com/wxa/del_store?access_token=ACCESS_TOKEN',
+        'DelStore' => 'https://api.weixin.qq.com/wxa/del_store?access_token=ACCESS_TOKEN',
         //发送语意理解请求 请求方式POST
-        'SemanticSemproxy'=>'https://api.weixin.qq.com/semantic/semproxy/search?access_token=ACCESS_TOKEN',
+        'SemanticSemproxy' => 'https://api.weixin.qq.com/semantic/semproxy/search?access_token=ACCESS_TOKEN',
         //提交语音 请求方式POST
-        'AddVoiceToRecoForText'=>'http://api.weixin.qq.com/cgi-bin/media/voice/addvoicetorecofortext?access_token=ACCESS_TOKEN',
+        'AddVoiceToRecoForText' => 'http://api.weixin.qq.com/cgi-bin/media/voice/addvoicetorecofortext?access_token=ACCESS_TOKEN',
         //获取语音识别结果 请求方式POST
-        'QueryRecoResultForText'=>'http://api.weixin.qq.com/cgi-bin/media/voice/queryrecoresultfortext?access_token=ACCESS_TOKEN',
+        'QueryRecoResultForText' => 'http://api.weixin.qq.com/cgi-bin/media/voice/queryrecoresultfortext?access_token=ACCESS_TOKEN',
         //微信翻译接口 请求方式POST
-        'TranslateContent'=>'http://api.weixin.qq.com/cgi-bin/media/voice/translatecontent?access_token=ACCESS_TOKEN',
+        'TranslateContent' => 'http://api.weixin.qq.com/cgi-bin/media/voice/translatecontent?access_token=ACCESS_TOKEN',
         //身份证OCR识别接口 请求方式File
-        'IdCard'=>'http://api.weixin.qq.com/cv/ocr/idcard?type=MODE&img_url=ENCODE_URL&access_token=ACCESS_TOCKEN',
+        'IdCard' => 'http://api.weixin.qq.com/cv/ocr/idcard?type=MODE&img_url=ENCODE_URL&access_token=ACCESS_TOCKEN',
         //银行卡OCR识别接口 请求方式File
-        'BankCard'=>'http://api.weixin.qq.com/cv/ocr/bankcard?img_url=ENCODE_URL&access_token=ACCESS_TOCKEN',
+        'BankCard' => 'http://api.weixin.qq.com/cv/ocr/bankcard?img_url=ENCODE_URL&access_token=ACCESS_TOCKEN',
         //行驶证OCR识别接口 请求方式File
-        'Driving'=>'http://api.weixin.qq.com/cv/ocr/driving?img_url=ENCODE_URL&access_token=ACCESS_TOCKEN',
+        'Driving' => 'http://api.weixin.qq.com/cv/ocr/driving?img_url=ENCODE_URL&access_token=ACCESS_TOCKEN',
         //申请开通摇一摇功能接口 请求方式POST
-        'Register'=>'https://api.weixin.qq.com/shakearound/account/register?access_token=ACCESS_TOKEN',
+        'Register' => 'https://api.weixin.qq.com/shakearound/account/register?access_token=ACCESS_TOKEN',
         //查询审核状态 请求方式get
-        'AuditStatus'=>'https://api.weixin.qq.com/shakearound/account/auditstatus?access_token=ACCESS_TOKEN',
+        'AuditStatus' => 'https://api.weixin.qq.com/shakearound/account/auditstatus?access_token=ACCESS_TOKEN',
         //申请设备ID 请求方式POST
-        'ApplyId'=>'https://api.weixin.qq.com/shakearound/device/applyid?access_token=ACCESS_TOKEN',
+        'ApplyId' => 'https://api.weixin.qq.com/shakearound/device/applyid?access_token=ACCESS_TOKEN',
         //查询设备ID申请审核状态 请求方式POST
-        'ApplyStatus'=>'https://api.weixin.qq.com/shakearound/device/applystatus?access_token=ACCESS_TOKEN',
+        'ApplyStatus' => 'https://api.weixin.qq.com/shakearound/device/applystatus?access_token=ACCESS_TOKEN',
         //编辑设备信息 请求方式POST
-        'DeviceUpdate'=>'https://api.weixin.qq.com/shakearound/device/update?access_token=ACCESS_TOKEN',
+        'DeviceUpdate' => 'https://api.weixin.qq.com/shakearound/device/update?access_token=ACCESS_TOKEN',
         //配备设备与门店的关联关系 or 配备设备与其它公众账号门店的关联关系 请求方式POST
-        'BindLocation'=>'https://api.weixin.qq.com/shakearound/device/bindlocation?access_token=ACCESS_TOKEN',
+        'BindLocation' => 'https://api.weixin.qq.com/shakearound/device/bindlocation?access_token=ACCESS_TOKEN',
         //查询设备列表 请求方式POST
-        'DeviceSearch'=>'https://api.weixin.qq.com/shakearound/device/search?access_token=ACCESS_TOKEN',
+        'DeviceSearch' => 'https://api.weixin.qq.com/shakearound/device/search?access_token=ACCESS_TOKEN',
         //页面管理接口 请求方式POST
-        'PageAdd'=>'https://api.weixin.qq.com/shakearound/page/add?access_token=ACCESS_TOKEN',
+        'PageAdd' => 'https://api.weixin.qq.com/shakearound/page/add?access_token=ACCESS_TOKEN',
         //编辑页面信息 请求方式POST
-        'PageUpdate'=>'https://api.weixin.qq.com/shakearound/page/update?access_token=ACCESS_TOKEN',
+        'PageUpdate' => 'https://api.weixin.qq.com/shakearound/page/update?access_token=ACCESS_TOKEN',
         //查询页面列表 请求方式POST
-        'PageSearch'=>'https://api.weixin.qq.com/shakearound/page/search?access_token=ACCESS_TOKEN',
+        'PageSearch' => 'https://api.weixin.qq.com/shakearound/page/search?access_token=ACCESS_TOKEN',
         //删除页面 请求方式POST
-        'PageDelete'=>'https://api.weixin.qq.com/shakearound/page/delete?access_token=ACCESS_TOKEN',
+        'PageDelete' => 'https://api.weixin.qq.com/shakearound/page/delete?access_token=ACCESS_TOKEN',
         //上传图片素材 请求方式POST
-        'MaterialAdd'=>'https://api.weixin.qq.com/shakearound/material/add?access_token=ACCESS_TOKEN&type=TYPE',
+        'MaterialAdd' => 'https://api.weixin.qq.com/shakearound/material/add?access_token=ACCESS_TOKEN&type=TYPE',
         //配备设备与页面的关联关系 请求方式POST
-        'DeviceBindPage'=>'https://api.weixin.qq.com/shakearound/device/bindpage?access_token=ACCESS_TOKEN',
+        'DeviceBindPage' => 'https://api.weixin.qq.com/shakearound/device/bindpage?access_token=ACCESS_TOKEN',
         //查询设备与页面的关联关系 请求方式POST
-        'RelationSearch'=>'https://api.weixin.qq.com/shakearound/relation/search?access_token=ACCESS_TOKEN',
+        'RelationSearch' => 'https://api.weixin.qq.com/shakearound/relation/search?access_token=ACCESS_TOKEN',
         //以设备为维度的数据统计接口 请求方式POST
-        'StatisticsDevice'=>'https://api.weixin.qq.com/shakearound/statistics/device?access_token=ACCESS_TOKEN',
+        'StatisticsDevice' => 'https://api.weixin.qq.com/shakearound/statistics/device?access_token=ACCESS_TOKEN',
         //批量查询设备统计数据接口 请求方式POST
-        'DeviceList'=>'https://api.weixin.qq.com/shakearound/statistics/devicelist?access_token=ACCESS_TOKEN',
+        'DeviceList' => 'https://api.weixin.qq.com/shakearound/statistics/devicelist?access_token=ACCESS_TOKEN',
         //以页面为维度的数据统计接口 请求方式POST
-        'StatisticsPage'=>'https://api.weixin.qq.com/shakearound/statistics/page?access_token=ACCESS_TOKEN',
+        'StatisticsPage' => 'https://api.weixin.qq.com/shakearound/statistics/page?access_token=ACCESS_TOKEN',
         //批量查询页面统计数据接口 请求方式POST
-        'PageList'=>'https://api.weixin.qq.com/shakearound/statistics/pagelist?access_token=ACCESS_TOKEN',
+        'PageList' => 'https://api.weixin.qq.com/shakearound/statistics/pagelist?access_token=ACCESS_TOKEN',
         //新增分组接口 请求方式POST
-        'GroupAdd'=>'https://api.weixin.qq.com/shakearound/device/group/add?access_token=ACCESS_TOKEN',
+        'GroupAdd' => 'https://api.weixin.qq.com/shakearound/device/group/add?access_token=ACCESS_TOKEN',
         //编辑分组信息 请求方式POST
-        'GroupUpdate'=>'https://api.weixin.qq.com/shakearound/device/group/update?access_token=ACCESS_TOKEN',
+        'GroupUpdate' => 'https://api.weixin.qq.com/shakearound/device/group/update?access_token=ACCESS_TOKEN',
         //删除分组 请求方式POST
-        'GroupDelete'=>'https://api.weixin.qq.com/shakearound/device/group/delete?access_token=ACCESS_TOKEN',
+        'GroupDelete' => 'https://api.weixin.qq.com/shakearound/device/group/delete?access_token=ACCESS_TOKEN',
         //查询分组列表 请求方式POST
-        'GroupGetList'=>'https://api.weixin.qq.com/shakearound/device/group/getlist?access_token=ACCESS_TOKEN',
+        'GroupGetList' => 'https://api.weixin.qq.com/shakearound/device/group/getlist?access_token=ACCESS_TOKEN',
         //查询分组详情 请求方式POST
-        'GroupGetDetail'=>'https://api.weixin.qq.com/shakearound/device/group/getdetail?access_token=ACCESS_TOKEN',
+        'GroupGetDetail' => 'https://api.weixin.qq.com/shakearound/device/group/getdetail?access_token=ACCESS_TOKEN',
         //添加设备到分组 请求方式POST
-        'GroupAddDevice'=>'https://api.weixin.qq.com/shakearound/device/group/adddevice?access_token=ACCESS_TOKEN',
+        'GroupAddDevice' => 'https://api.weixin.qq.com/shakearound/device/group/adddevice?access_token=ACCESS_TOKEN',
         //从分组中移除设备 请求方式POST
-        'GroupDeleteDevice'=>'https://api.weixin.qq.com/shakearound/device/group/deletedevice?access_token=ACCESS_TOKEN',
+        'GroupDeleteDevice' => 'https://api.weixin.qq.com/shakearound/device/group/deletedevice?access_token=ACCESS_TOKEN',
         //获取设备及用户信息 请求方式POST
-        'UserGetShakeInfo'=>'https://api.weixin.qq.com/shakearound/user/getshakeinfo?access_token=ACCESS_TOKEN',
+        'UserGetShakeInfo' => 'https://api.weixin.qq.com/shakearound/user/getshakeinfo?access_token=ACCESS_TOKEN',
         //红包预下单接口 请求方式POST 数据类型XML
-        'HbPreOrder'=>'https://api.mch.weixin.qq.com/mmpaymkttransfers/hbpreorder',
+        'HbPreOrder' => 'https://api.mch.weixin.qq.com/mmpaymkttransfers/hbpreorder',
         //创建红包活动 请求方式POST
-        'AddLotteryInfo'=>'https://api.weixin.qq.com/shakearound/lottery/addlotteryinfo?access_token=ACCESS_TOKEN&use_template=1&logo_url=LOGO_URL',
+        'AddLotteryInfo' => 'https://api.weixin.qq.com/shakearound/lottery/addlotteryinfo?access_token=ACCESS_TOKEN&use_template=1&logo_url=LOGO_URL',
         //录入红包信息 请求方式POST
-        'SetPrizeBucket'=>'https://api.weixin.qq.com/shakearound/lottery/setprizebucket?access_token=ACCESS_TOKEN',
+        'SetPrizeBucket' => 'https://api.weixin.qq.com/shakearound/lottery/setprizebucket?access_token=ACCESS_TOKEN',
         //设置红包活动抽奖开关 请求方式get
-        'SetLotterySwitch'=>'https://api.weixin.qq.com/shakearound/lottery/setlotteryswitch?access_token=ACCESS_TOKEN&lottery_id=LOTTERYID&onoff=1',
+        'SetLotterySwitch' => 'https://api.weixin.qq.com/shakearound/lottery/setlotteryswitch?access_token=ACCESS_TOKEN&lottery_id=LOTTERYID&onoff=1',
         //红包查询接口 请求方式get
-        'QueryLottery'=>'https://api.weixin.qq.com/shakearound/lottery/querylottery?access_token=ACCESS_TOKEN&lottery_id=LOTTERYID',
+        'QueryLottery' => 'https://api.weixin.qq.com/shakearound/lottery/querylottery?access_token=ACCESS_TOKEN&lottery_id=LOTTERYID',
         //第三方平台获取开插件wifi_token 请求方式POST
-        'OpenPlugin'=>'https://api.weixin.qq.com/bizwifi/openplugin/token?access_token=ACCESS_TOKEN',
+        'OpenPlugin' => 'https://api.weixin.qq.com/bizwifi/openplugin/token?access_token=ACCESS_TOKEN',
         //连Wi-Fi完成页跳转小程序接口 or 设置连网完成页 请求方式POST
-        'FinishPageSet'=>'https://api.weixin.qq.com/bizwifi/finishpage/set?access_token=ACCESS_TOKEN',
+        'FinishPageSet' => 'https://api.weixin.qq.com/bizwifi/finishpage/set?access_token=ACCESS_TOKEN',
         //设置顶部banner跳转小程序接口 设置商家主页 请求方式POST
-        'HomePageSet'=>'https://api.weixin.qq.com/bizwifi/homepage/set?access_token=ACCESS_TOKEN',
+        'HomePageSet' => 'https://api.weixin.qq.com/bizwifi/homepage/set?access_token=ACCESS_TOKEN',
         //查询门店WiFi信息接口 请求方式POST
-        'ShopGet'=>'https://api.weixin.qq.com/bizwifi/shop/get?access_token=ACCESS_TOKEN',
+        'ShopGet' => 'https://api.weixin.qq.com/bizwifi/shop/get?access_token=ACCESS_TOKEN',
         //获取WiFi门店列表 请求方式POST
-        'ShopList'=>'https://api.weixin.qq.com/bizwifi/shop/list?access_token=ACCESS_TOKEN',
+        'ShopList' => 'https://api.weixin.qq.com/bizwifi/shop/list?access_token=ACCESS_TOKEN',
         //修改门店网络信息 请求方式POST
-        'ShopUpdate'=>'https://api.weixin.qq.com/bizwifi/shop/update?access_token=ACCESS_TOKEN',
+        'ShopUpdate' => 'https://api.weixin.qq.com/bizwifi/shop/update?access_token=ACCESS_TOKEN',
         //清空门店网络及其设备 请求方式POST
-        'ShopClean'=>'https://api.weixin.qq.com/bizwifi/shop/clean?access_token=ACCESS_TOKEN',
+        'ShopClean' => 'https://api.weixin.qq.com/bizwifi/shop/clean?access_token=ACCESS_TOKEN',
         //添加密码型设备 请求方式POST
-        'DeviceAdd'=>'https://api.weixin.qq.com/bizwifi/device/add?access_token=ACCESS_TOKEN',
+        'DeviceAdd' => 'https://api.weixin.qq.com/bizwifi/device/add?access_token=ACCESS_TOKEN',
         //添加portal型设备 请求方式POST
-        'ApportalRegister'=>'https://api.weixin.qq.com/bizwifi/apportal/register?access_token=ACCESS_TOKEN',
+        'ApportalRegister' => 'https://api.weixin.qq.com/bizwifi/apportal/register?access_token=ACCESS_TOKEN',
         //查询设备 请求方式POST
-        'BizwwifiDeviceList'=>'https://api.weixin.qq.com/bizwifi/device/list?access_token=ACCESS_TOKEN',
+        'BizwwifiDeviceList' => 'https://api.weixin.qq.com/bizwifi/device/list?access_token=ACCESS_TOKEN',
         //删除设备 请求方式POST
-        'DeviceDelete'=>'https://api.weixin.qq.com/bizwifi/device/delete?access_token=ACCESS_TOKEN',
+        'DeviceDelete' => 'https://api.weixin.qq.com/bizwifi/device/delete?access_token=ACCESS_TOKEN',
         //获取物料的二维码 请求方式POST
-        'QrcodeGet'=>'https://api.weixin.qq.com/bizwifi/qrcode/get?access_token=ACCESS_TOKEN',
+        'QrcodeGet' => 'https://api.weixin.qq.com/bizwifi/qrcode/get?access_token=ACCESS_TOKEN',
         //查询商家主页 请求方式POST
-        'HomepageGet'=>'https://api.weixin.qq.com/bizwifi/homepage/get?access_token=ACCESS_TOKEN',
+        'HomepageGet' => 'https://api.weixin.qq.com/bizwifi/homepage/get?access_token=ACCESS_TOKEN',
         //设置微信首页欢迎语 请求方式POST
-        'BarSet'=>'https://api.weixin.qq.com/bizwifi/bar/set?access_token=ACCESS_TOKEN',
+        'BarSet' => 'https://api.weixin.qq.com/bizwifi/bar/set?access_token=ACCESS_TOKEN',
         //Wi-Fi数据统计 请求方式POST
-        'StatisticsList'=>'https://api.weixin.qq.com/bizwifi/statistics/list?access_token=ACCESS_TOKEN',
+        'StatisticsList' => 'https://api.weixin.qq.com/bizwifi/statistics/list?access_token=ACCESS_TOKEN',
         //设置门店卡券投放信息 请求方式POST
-        'CouponputSet'=>'https://api.weixin.qq.com/bizwifi/couponput/set?access_token=ACCESS_TOKEN',
+        'CouponputSet' => 'https://api.weixin.qq.com/bizwifi/couponput/set?access_token=ACCESS_TOKEN',
         //查询门店卡券投放信息 请求方式POST
-        'CouponputGet'=>'https://api.weixin.qq.com/bizwifi/couponput/get?access_token=ACCESS_TOKEN',
+        'CouponputGet' => 'https://api.weixin.qq.com/bizwifi/couponput/get?access_token=ACCESS_TOKEN',
         //获取商户信息 请求方式get
-        'MerchantInfoGet'=>'https://api.weixin.qq.com/scan/merchantinfo/get?access_token=ACCESS_TOKEN',
+        'MerchantInfoGet' => 'https://api.weixin.qq.com/scan/merchantinfo/get?access_token=ACCESS_TOKEN',
         //创建商品 请求方式POST
-        'ProductCreate'=>'https://api.weixin.qq.com/scan/product/create?access_token=ACCESS_TOKEN',
+        'ProductCreate' => 'https://api.weixin.qq.com/scan/product/create?access_token=ACCESS_TOKEN',
         //商品发布 请求方式POST
-        'ProductModstatus'=>'https://api.weixin.qq.com/scan/product/modstatus?access_token=ACCESS_TOKEN',
+        'ProductModstatus' => 'https://api.weixin.qq.com/scan/product/modstatus?access_token=ACCESS_TOKEN',
         //设置测试人员白名单 请求方式POST
-        'TestWhiteListSet'=>'https://api.weixin.qq.com/scan/testwhitelist/set?access_token=ACCESS_TOKEN',
+        'TestWhiteListSet' => 'https://api.weixin.qq.com/scan/testwhitelist/set?access_token=ACCESS_TOKEN',
         //获取商品二维码 请求方式POST
-        'ProductGetQrCode'=>'https://api.weixin.qq.com/scan/product/getqrcode?access_token=ACCESS_TOKEN',
+        'ProductGetQrCode' => 'https://api.weixin.qq.com/scan/product/getqrcode?access_token=ACCESS_TOKEN',
         //查询商品信息 请求方式POST
-        'ProductGet'=>'https://api.weixin.qq.com/scan/product/get?access_token=ACCESS_TOKEN',
+        'ProductGet' => 'https://api.weixin.qq.com/scan/product/get?access_token=ACCESS_TOKEN',
         //批量查询商品信息 请求方式POST
-        'ProductGetList'=>'https://api.weixin.qq.com/scan/product/getlist?access_token=ACCESS_TOKEN',
+        'ProductGetList' => 'https://api.weixin.qq.com/scan/product/getlist?access_token=ACCESS_TOKEN',
         //更新商品信息 请求方式POST
-        'ProductUpdate'=>'https://api.weixin.qq.com/scan/product/update?access_token=ACCESS_TOKEN',
+        'ProductUpdate' => 'https://api.weixin.qq.com/scan/product/update?access_token=ACCESS_TOKEN',
         //清除商品信息 请求方式POST
-        'ProductClear'=>'https://api.weixin.qq.com/scan/product/clear?access_token=ACCESS_TOKEN',
+        'ProductClear' => 'https://api.weixin.qq.com/scan/product/clear?access_token=ACCESS_TOKEN',
         //检查wxticket参数 请求方式POST
-        'ScanticketCheck'=>'https://api.weixin.qq.com/scan/scanticket/check?access_token=ACCESS_TOKEN',
+        'ScanticketCheck' => 'https://api.weixin.qq.com/scan/scanticket/check?access_token=ACCESS_TOKEN',
         //清除扫码记录 请求方式POST
-        'ClearScanticketCheck'=>'https://api.weixin.qq.com/scan/scanticket/check?access_token=ACCESS_TOKEN',
+        'ClearScanticketCheck' => 'https://api.weixin.qq.com/scan/scanticket/check?access_token=ACCESS_TOKEN',
         //获取授权页ticket 请求方式get
-        'GetTicket'=>'https://api.weixin.qq.com/cgi-bin/ticket/getticket?access_token=ACCESS_TOKEN&type=wx_card',
+        'GetTicket' => 'https://api.weixin.qq.com/cgi-bin/ticket/getticket?access_token=ACCESS_TOKEN&type=wx_card',
         //获取授权页链接 请求方式POST
-        'GetAuthurl'=>'https://api.weixin.qq.com/card/invoice/getauthurl?access_token=ACCESS_TOKEN',
+        'GetAuthurl' => 'https://api.weixin.qq.com/card/invoice/getauthurl?access_token=ACCESS_TOKEN',
         //查询授权完成状态 请求方式POST
-        'GetAuthData'=>'https://api.weixin.qq.com/card/invoice/getauthdata?access_token=ACCESS_TOKEN',
+        'GetAuthData' => 'https://api.weixin.qq.com/card/invoice/getauthdata?access_token=ACCESS_TOKEN',
         //拒绝开票 请求方式POST
-        'RejectInsert'=>'https://api.weixin.qq.com/card/invoice/rejectinsert?access_token=ACCESS_TOKEN',
+        'RejectInsert' => 'https://api.weixin.qq.com/card/invoice/rejectinsert?access_token=ACCESS_TOKEN',
         //设置授权页字段信息 请求方式POST
-        'SetAuthField'=>'https://api.weixin.qq.com/card/invoice/setbizattr?action=set_auth_field&access_token=ACCESS_TOKEN',
+        'SetAuthField' => 'https://api.weixin.qq.com/card/invoice/setbizattr?action=set_auth_field&access_token=ACCESS_TOKEN',
         //查询授权页字段信息 请求方式POST
-        'GetAuthField'=>'https://api.weixin.qq.com/card/invoice/setbizattr?action=get_auth_field&access_token=ACCESS_TOKEN',
+        'GetAuthField' => 'https://api.weixin.qq.com/card/invoice/setbizattr?action=get_auth_field&access_token=ACCESS_TOKEN',
         //关联商户号与开票平台 请求方式POST
-        'SetPayMch'=>'https://api.weixin.qq.com/card/invoice/setbizattr?action=set_pay_mch&access_token=ACCESS_TOKEN',
+        'SetPayMch' => 'https://api.weixin.qq.com/card/invoice/setbizattr?action=set_pay_mch&access_token=ACCESS_TOKEN',
         //查询商户号与开票平台关联情况 请求方式POST
-        'GetPayMch'=>'https://api.weixin.qq.com/card/invoice/setbizattr?action=get_pay_mch&access_token=ACCESS_TOKEN',
+        'GetPayMch' => 'https://api.weixin.qq.com/card/invoice/setbizattr?action=get_pay_mch&access_token=ACCESS_TOKEN',
         //统一开票接口-开具蓝票 请求方式POST
-        'MakeOutInvoice'=>'https://api.weixin.qq.com/card/invoice/makeoutinvoice?access_token=ACCESS_TOKEN',
+        'MakeOutInvoice' => 'https://api.weixin.qq.com/card/invoice/makeoutinvoice?access_token=ACCESS_TOKEN',
         //统一发票接口发票冲红 请求方式POST
-        'ClearOutInvoice'=>'https://api.weixin.qq.com/card/invoice/clearoutinvoice?access_token=ACCESS_TOKEN',
+        'ClearOutInvoice' => 'https://api.weixin.qq.com/card/invoice/clearoutinvoice?access_token=ACCESS_TOKEN',
         //统一开票接口查询已开发票 请求方式POST
-        'QueryInvoceInfo'=>'https://api.weixin.qq.com/card/invoice/queryinvoceinfo?access_token=ACCESS_TOKEN',
+        'QueryInvoceInfo' => 'https://api.weixin.qq.com/card/invoice/queryinvoceinfo?access_token=ACCESS_TOKEN',
         //设置商户联系方式 请求方式POST
-        'SetContact'=>'https://api.weixin.qq.com/card/invoice/setbizattr?action=set_contact&access_token=ACCESS_TOKEN',
+        'SetContact' => 'https://api.weixin.qq.com/card/invoice/setbizattr?action=set_contact&access_token=ACCESS_TOKEN',
         //查询商户联系方式 请求方式POST
-        'GetContact'=>'https://api.weixin.qq.com/card/invoice/setbizattr?action=get_contact&access_token=ACCESS_TOKEN',
+        'GetContact' => 'https://api.weixin.qq.com/card/invoice/setbizattr?action=get_contact&access_token=ACCESS_TOKEN',
         //获取自身的开票平台识别码 请求方式POST
-        'SetUrl'=>'https://api.weixin.qq.com/card/invoice/seturl?access_token=ACCESS_TOKEN',
+        'SetUrl' => 'https://api.weixin.qq.com/card/invoice/seturl?access_token=ACCESS_TOKEN',
         //创建发票卡券模板 请求方式POST
-        'CreateCard'=>'https://api.weixin.qq.com/card/invoice/platform/createcard?access_token=ACCESS_TOKEN',
+        'CreateCard' => 'https://api.weixin.qq.com/card/invoice/platform/createcard?access_token=ACCESS_TOKEN',
         //上传PDF 请求方式POST
-        'SetPdf'=>'https://api.weixin.qq.com/card/invoice/platform/setpdf?access_token=ACCESS_TOKEN',
+        'SetPdf' => 'https://api.weixin.qq.com/card/invoice/platform/setpdf?access_token=ACCESS_TOKEN',
         //查询以上传的PDF文件 请求方式POST
-        'GetPdf'=>'https://api.weixin.qq.com/card/invoice/platform/getpdf?action=get_url&access_token=ACCESS_TOKEN',
+        'GetPdf' => 'https://api.weixin.qq.com/card/invoice/platform/getpdf?action=get_url&access_token=ACCESS_TOKEN',
         //将电子发票卡券插入用户卡包 请求方式POST
-        'InvoiceInsert'=>'https://api.weixin.qq.com/card/invoice/insert?access_token=ACCESS_TOKEN',
+        'InvoiceInsert' => 'https://api.weixin.qq.com/card/invoice/insert?access_token=ACCESS_TOKEN',
         //更新发票卡券状态 请求方式POST
-        'InvoiceUpdateStatus'=>'https://api.weixin.qq.com/card/invoice/platform/updatestatus?access_token=ACCESS_TOKEN',
+        'InvoiceUpdateStatus' => 'https://api.weixin.qq.com/card/invoice/platform/updatestatus?access_token=ACCESS_TOKEN',
         //查询报销发票信息 请求方式POST
-        'GetInvoiceInfo'=>'https://api.weixin.qq.com/card/invoice/reimburse/getinvoiceinfo?access_token=ACCESS_TOKEN',
+        'GetInvoiceInfo' => 'https://api.weixin.qq.com/card/invoice/reimburse/getinvoiceinfo?access_token=ACCESS_TOKEN',
         //批量查询报销发票信息 请求方式POST
-        'GetInvoiceBatch'=>'https://api.weixin.qq.com/card/invoice/reimburse/getinvoicebatch?access_token=ACCESS_TOKEN',
+        'GetInvoiceBatch' => 'https://api.weixin.qq.com/card/invoice/reimburse/getinvoicebatch?access_token=ACCESS_TOKEN',
         //报销方更新发票状态 请求方式POST
-        'UpdateInvoiceStatus'=>'https://api.weixin.qq.com/card/invoice/reimburse/updateinvoicestatus?access_token=ACCESS_TOKEN',
+        'UpdateInvoiceStatus' => 'https://api.weixin.qq.com/card/invoice/reimburse/updateinvoicestatus?access_token=ACCESS_TOKEN',
         //报销方批量更新发票状态 请求方式POST
-        'UpdateStatusBatch'=>'https://api.weixin.qq.com/card/invoice/reimburse/updatestatusbatch?access_token=ACCESS_TOKEN',
+        'UpdateStatusBatch' => 'https://api.weixin.qq.com/card/invoice/reimburse/updatestatusbatch?access_token=ACCESS_TOKEN',
         //将发票抬头信息录入到用户微信中 请求方式POST
-        'GetUserTitleUrl'=>'https://api.weixin.qq.com/card/invoice/biz/getusertitleurl?access_token=ACCESS_TOKEN',
+        'GetUserTitleUrl' => 'https://api.weixin.qq.com/card/invoice/biz/getusertitleurl?access_token=ACCESS_TOKEN',
         //获取用户抬头（方式一）:获取商户专属二维码，立在收银台 请求方式POST
-        'GetSelectTitleUrl'=>'https://api.weixin.qq.com/card/invoice/biz/getselecttitleurl?access_token=ACCESS_TOKEN',
+        'GetSelectTitleUrl' => 'https://api.weixin.qq.com/card/invoice/biz/getselecttitleurl?access_token=ACCESS_TOKEN',
         //获取用户抬头（方式二）:商户扫描用户的发票抬头二维码 请求方式POST
-        'ScanTitle'=>'URL:https://api.weixin.qq.com/card/invoice/scantitle?access_token=ACCESS_TOKEN',
+        'ScanTitle' => 'URL:https://api.weixin.qq.com/card/invoice/scantitle?access_token=ACCESS_TOKEN',
         //获取授权页链接 请求方式POST
-        'GetBillAuthUrl'=>'https://api.weixin.qq.com/nontax/getbillauthurl?access_token=ACCESS_TOKEN',
+        'GetBillAuthUrl' => 'https://api.weixin.qq.com/nontax/getbillauthurl?access_token=ACCESS_TOKEN',
         //创建财政电子票据接口 请求方式POST
-        'CreateBillCard'=>'https://api.weixin.qq.com/nontax/createbillcard?access_token=ACCESS_TOKEN',
+        'CreateBillCard' => 'https://api.weixin.qq.com/nontax/createbillcard?access_token=ACCESS_TOKEN',
         //将财政电子票据添加到用户微信卡包 请求方式POST
-        'InsertBill'=>'https://api.weixin.qq.com/nontax/insertbill?access_token=ACCESS_TOKEN',
+        'InsertBill' => 'https://api.weixin.qq.com/nontax/insertbill?access_token=ACCESS_TOKEN',
         /***
          * 微信公众号API END
          */
@@ -545,101 +545,101 @@ class Api
          * 微信小程序API START
          */
         // 微信小程序access_token 请求方式 GET
-        'WeApiAccessToken'=>'https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=WEAPIAPPID&secret=WEAPIAPPSECRET',
+        'WeApiAccessToken' => 'https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=WEAPIAPPID&secret=WEAPIAPPSECRET',
         //微信code换取session 请求方式 GET
-        'Code2Session'=>'https://api.weixin.qq.com/sns/jscode2session?appid=WEAPIAPPID&secret=WEAPISECRET&js_code=CODE&grant_type=authorization_code',
+        'Code2Session' => 'https://api.weixin.qq.com/sns/jscode2session?appid=WEAPIAPPID&secret=WEAPISECRET&js_code=CODE&grant_type=authorization_code',
         //获取模板库标题列表 请求方式 POST
-        'WeApiTemplateList'=>'https://api.weixin.qq.com/cgi-bin/wxopen/template/library/list?access_token=WEAPI_ACCESS_TOKEN',
+        'WeApiTemplateList' => 'https://api.weixin.qq.com/cgi-bin/wxopen/template/library/list?access_token=WEAPI_ACCESS_TOKEN',
         //获取模板库某个模板标题下关键词库 请求方式 POST
-        'WeApiTemplateGet'=>'https://api.weixin.qq.com/cgi-bin/wxopen/template/library/get?access_token=WEAPI_ACCESS_TOKEN',
+        'WeApiTemplateGet' => 'https://api.weixin.qq.com/cgi-bin/wxopen/template/library/get?access_token=WEAPI_ACCESS_TOKEN',
         //组合模板并添加至帐号下的个人模板库 请求方式 POST
-        'WeApiTemplateAdd'=>'https://api.weixin.qq.com/cgi-bin/wxopen/template/add?access_token=WEAPI_ACCESS_TOKEN',
+        'WeApiTemplateAdd' => 'https://api.weixin.qq.com/cgi-bin/wxopen/template/add?access_token=WEAPI_ACCESS_TOKEN',
         //获取帐号下已存在的模板列表 请求方式 POST
-        'WeApiTemplateLists'=>'https://api.weixin.qq.com/cgi-bin/wxopen/template/list?access_token=WEAPI_ACCESS_TOKEN',
+        'WeApiTemplateLists' => 'https://api.weixin.qq.com/cgi-bin/wxopen/template/list?access_token=WEAPI_ACCESS_TOKEN',
         //删除帐号下的某个模板 请求方式 POST
-        'WeApiTemplateDelete'=>'https://api.weixin.qq.com/cgi-bin/wxopen/template/del?access_token=WEAPI_ACCESS_TOKEN',
+        'WeApiTemplateDelete' => 'https://api.weixin.qq.com/cgi-bin/wxopen/template/del?access_token=WEAPI_ACCESS_TOKEN',
         //发送客服消息给用户 请求方式 POST
-        'WeApiTemplateSend'=>'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=WEAPI_ACCESS_TOKEN',
+        'WeApiTemplateSend' => 'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=WEAPI_ACCESS_TOKEN',
         //把媒体文件上传到微信服务器。目前仅支持图片。用于发送客服消息或被动回复用户消息。请求方式 POST
-        'WeApiMediaUpload'=>'https://api.weixin.qq.com/cgi-bin/media/upload?access_token=WEAPI_ACCESS_TOKEN&type=TYPE',
+        'WeApiMediaUpload' => 'https://api.weixin.qq.com/cgi-bin/media/upload?access_token=WEAPI_ACCESS_TOKEN&type=TYPE',
         //获取客服消息内的临时素材。即下载临时的多媒体文件。目前小程序仅支持下载图片文件 请求方式 GET
-        'WeApiMediaGet'=>'https://api.weixin.qq.com/cgi-bin/media/get?access_token=WEAPI_ACCESS_TOKEN&media_id=MEDIA_ID',
+        'WeApiMediaGet' => 'https://api.weixin.qq.com/cgi-bin/media/get?access_token=WEAPI_ACCESS_TOKEN&media_id=MEDIA_ID',
         //下发客服当前输入状态给用户 请求方式 POST
-        'WeApiCustomTyping'=>'https://api.weixin.qq.com/cgi-bin/message/custom/typing?access_token=WEAPI_ACCESS_TOKEN',
+        'WeApiCustomTyping' => 'https://api.weixin.qq.com/cgi-bin/message/custom/typing?access_token=WEAPI_ACCESS_TOKEN',
         //发送客服消息给用户 请求方式 POST
-        'WeApiCustomSend'=>'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=WEAPI_ACCESS_TOKEN',
+        'WeApiCustomSend' => 'https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=WEAPI_ACCESS_TOKEN',
         //用户支付完成后，获取该用户的 UnionId 请求方式 GET
-        'WeApiGetUnionid'=>'https://api.weixin.qq.com/wxa/getpaidunionid?access_token=WEAPI_ACCESS_TOKEN&openid=OPENID',
+        'WeApiGetUnionid' => 'https://api.weixin.qq.com/wxa/getpaidunionid?access_token=WEAPI_ACCESS_TOKEN&openid=OPENID',
         //获取用户访问小程序日留存 请求方式 POST
-        'WeApiDatacubeDay'=>'https://api.weixin.qq.com/datacube/getweanalysisappiddailyretaininfo?access_token=WEAPI_ACCESS_TOKEN',
+        'WeApiDatacubeDay' => 'https://api.weixin.qq.com/datacube/getweanalysisappiddailyretaininfo?access_token=WEAPI_ACCESS_TOKEN',
         //获取用户访问小程序月留存 请求方式 POST
-        'WeApiDatacubeMonth'=>'https://api.weixin.qq.com/datacube/getweanalysisappidmonthlyretaininfo?access_token=WEAPI_ACCESS_TOKEN',
+        'WeApiDatacubeMonth' => 'https://api.weixin.qq.com/datacube/getweanalysisappidmonthlyretaininfo?access_token=WEAPI_ACCESS_TOKEN',
         //获取用户访问小程序周留存 请求方式 POST
-        'WeApiDatacubeWeek'=>'https://api.weixin.qq.com/datacube/getweanalysisappidweeklyretaininfo?access_token=WEAPI_ACCESS_TOKEN',
+        'WeApiDatacubeWeek' => 'https://api.weixin.qq.com/datacube/getweanalysisappidweeklyretaininfo?access_token=WEAPI_ACCESS_TOKEN',
         //获取用户访问小程序数据概况 请求方式 POST
-        'WeApiDatacube'=>'https://api.weixin.qq.com/datacube/getweanalysisappiddailysummarytrend?access_token=WEAPI_ACCESS_TOKEN',
+        'WeApiDatacube' => 'https://api.weixin.qq.com/datacube/getweanalysisappiddailysummarytrend?access_token=WEAPI_ACCESS_TOKEN',
         //获取用户访问小程序数据日趋势 请求方式 POST
-        'WeApiVisitDay'=>'https://api.weixin.qq.com/datacube/getweanalysisappiddailyvisittrend?access_token=WEAPI_ACCESS_TOKEN',
+        'WeApiVisitDay' => 'https://api.weixin.qq.com/datacube/getweanalysisappiddailyvisittrend?access_token=WEAPI_ACCESS_TOKEN',
         //获取用户访问小程序数据月趋势 请求方式 POST
-        'WeApiVisitMonth'=>'https://api.weixin.qq.com/datacube/getweanalysisappidmonthlyvisittrend?access_token=WEAPI_ACCESS_TOKEN',
+        'WeApiVisitMonth' => 'https://api.weixin.qq.com/datacube/getweanalysisappidmonthlyvisittrend?access_token=WEAPI_ACCESS_TOKEN',
         //获取用户访问小程序数据周趋势 请求方式 POST
-        'WeApiVisitWeek'=>'https://api.weixin.qq.com/datacube/getweanalysisappidweeklyvisittrend?access_token=WEAPI_ACCESS_TOKEN',
+        'WeApiVisitWeek' => 'https://api.weixin.qq.com/datacube/getweanalysisappidweeklyvisittrend?access_token=WEAPI_ACCESS_TOKEN',
         //获取小程序新增或活跃用户的画像分布数据。时间范围支持昨天、最近7天、最近30天。其中，新增用户数为时间范围内首次访问小程序的去重用户数，活跃用户数为时间范围内访问过小程序的去重用户数。 请求方式 POST
-        'WeApiPortrait'=>'https://api.weixin.qq.com/datacube/getweanalysisappiduserportrait?access_token=WEAPI_ACCESS_TOKEN',
+        'WeApiPortrait' => 'https://api.weixin.qq.com/datacube/getweanalysisappiduserportrait?access_token=WEAPI_ACCESS_TOKEN',
         //获取用户小程序访问分布数据 请求方式 POST
-        'WeApiDistribution'=>'https://api.weixin.qq.com/datacube/getweanalysisappidvisitdistribution?access_token=WEAPI_ACCESS_TOKEN',
+        'WeApiDistribution' => 'https://api.weixin.qq.com/datacube/getweanalysisappidvisitdistribution?access_token=WEAPI_ACCESS_TOKEN',
         //访问页面 请求方式 POST
-        'WeApiVisitPage'=>'https://api.weixin.qq.com/datacube/getweanalysisappidvisitpage?access_token=WEAPI_ACCESS_TOKEN',
+        'WeApiVisitPage' => 'https://api.weixin.qq.com/datacube/getweanalysisappidvisitpage?access_token=WEAPI_ACCESS_TOKEN',
         //下发小程序和公众号统一的服务消息 请求方式 POST
-        'WeApiTemplateUniform'=>'https://api.weixin.qq.com/cgi-bin/message/wxopen/template/uniform_send?access_token=WEAPI_ACCESS_TOKEN',
+        'WeApiTemplateUniform' => 'https://api.weixin.qq.com/cgi-bin/message/wxopen/template/uniform_send?access_token=WEAPI_ACCESS_TOKEN',
         //创建被分享动态消息的 activity_id 请求方式 POST
-        'WeApiActivityid'=>'https://api.weixin.qq.com/cgi-bin/message/wxopen/activityid/create?access_token=WEAPI_ACCESS_TOKEN',
+        'WeApiActivityid' => 'https://api.weixin.qq.com/cgi-bin/message/wxopen/activityid/create?access_token=WEAPI_ACCESS_TOKEN',
         //修改被分享的动态消息 请求方式 POST
-        'WeApiUpdatablemsg'=>'https://api.weixin.qq.com/cgi-bin/message/wxopen/updatablemsg/send?access_token=WEAPI_ACCESS_TOKEN',
+        'WeApiUpdatablemsg' => 'https://api.weixin.qq.com/cgi-bin/message/wxopen/updatablemsg/send?access_token=WEAPI_ACCESS_TOKEN',
         //向插件开发者发起使用插件的申请 请求方式 POST
-        'WeApiApplyPlugin'=>'https://api.weixin.qq.com/wxa/plugin?access_token=WEAPI_ACCESS_TOKEN',
+        'WeApiApplyPlugin' => 'https://api.weixin.qq.com/wxa/plugin?access_token=WEAPI_ACCESS_TOKEN',
         //获取当前所有插件使用方（供插件开发者调用） 请求方式 POST
-        'WeApiGetPlugin'=>'https://api.weixin.qq.com/wxa/devplugin?access_token=WEAPI_ACCESS_TOKEN',
+        'WeApiGetPlugin' => 'https://api.weixin.qq.com/wxa/devplugin?access_token=WEAPI_ACCESS_TOKEN',
         //查询已添加的插件 请求方式 POST
-        'WeApiPluginList'=>'https://api.weixin.qq.com/wxa/plugin?access_token=WEAPI_ACCESS_TOKEN',
+        'WeApiPluginList' => 'https://api.weixin.qq.com/wxa/plugin?access_token=WEAPI_ACCESS_TOKEN',
         //修改插件使用申请的状态（供插件开发者调用） 请求方式 POST
-        'PluginApplyStatus'=>'https://api.weixin.qq.com/wxa/devplugin?access_token=WEAPI_ACCESS_TOKEN',
+        'PluginApplyStatus' => 'https://api.weixin.qq.com/wxa/devplugin?access_token=WEAPI_ACCESS_TOKEN',
         //删除已添加的插件 请求方式 POST
-        'UnbindPlugin'=>'https://api.weixin.qq.com/wxa/plugin?access_token=WEAPI_ACCESS_TOKEN',
+        'UnbindPlugin' => 'https://api.weixin.qq.com/wxa/plugin?access_token=WEAPI_ACCESS_TOKEN',
         //添加地点 请求方式 POST
-        'WeApiAddPoi'=>'https://api.weixin.qq.com/wxa/addnearbypoi?access_token=WEAPI_ACCESS_TOKEN',
+        'WeApiAddPoi' => 'https://api.weixin.qq.com/wxa/addnearbypoi?access_token=WEAPI_ACCESS_TOKEN',
         //删除地点 请求方式 POST
-        'WeApiDelPoi'=>'https://api.weixin.qq.com/wxa/delnearbypoi?access_token=WEAPI_ACCESS_TOKEN',
+        'WeApiDelPoi' => 'https://api.weixin.qq.com/wxa/delnearbypoi?access_token=WEAPI_ACCESS_TOKEN',
         //查看地点列表 请求方式 GET
-        'WeApiPoiList'=>'https://api.weixin.qq.com/wxa/getnearbypoilist?page=1&page_rows=PAGE_ROWS&access_token=WEAPI_ACCESS_TOKEN',
+        'WeApiPoiList' => 'https://api.weixin.qq.com/wxa/getnearbypoilist?page=1&page_rows=PAGE_ROWS&access_token=WEAPI_ACCESS_TOKEN',
         //展示/取消展示附近小程序 请求方式 POST
-        'WeApiPoiShow'=>'https://api.weixin.qq.com/wxa/setnearbypoishowstatus?access_token=WEAPI_ACCESS_TOKEN',
+        'WeApiPoiShow' => 'https://api.weixin.qq.com/wxa/setnearbypoishowstatus?access_token=WEAPI_ACCESS_TOKEN',
         //获取小程序二维码，适用于需要的码数量较少的业务场景。通过该接口生成的小程序码，永久有效，有数量限制， 请求方式 POST
-        'CreateQrcode'=>'https://api.weixin.qq.com/cgi-bin/wxaapp/createwxaqrcode?access_token=WEAPI_ACCESS_TOKEN',
+        'CreateQrcode' => 'https://api.weixin.qq.com/cgi-bin/wxaapp/createwxaqrcode?access_token=WEAPI_ACCESS_TOKEN',
         //获取小程序码，适用于需要的码数量较少的业务场景。通过该接口生成的小程序码，永久有效，有数量限制 请求方式 POST
-        'getWXACode'=>'https://api.weixin.qq.com/wxa/getwxacode?access_token=WEAPI_ACCESS_TOKEN',
+        'getWXACode' => 'https://api.weixin.qq.com/wxa/getwxacode?access_token=WEAPI_ACCESS_TOKEN',
         //获取小程序码，适用于需要的码数量极多的业务场景。通过该接口生成的小程序码，永久有效，数量暂无限制。 请求方式 POST
-        'getWXACodeUnlimit'=>'https://api.weixin.qq.com/wxa/getwxacodeunlimit?access_token=WEAPI_ACCESS_TOKEN',
+        'getWXACodeUnlimit' => 'https://api.weixin.qq.com/wxa/getwxacodeunlimit?access_token=WEAPI_ACCESS_TOKEN',
         //校验一张图片是否含有违法违规内容 请求方式 POST
-        'imgSecCheck'=>'https://api.weixin.qq.com/wxa/img_sec_check?access_token=WEAPI_ACCESS_TOKEN',
+        'imgSecCheck' => 'https://api.weixin.qq.com/wxa/img_sec_check?access_token=WEAPI_ACCESS_TOKEN',
         // 检查一段文本是否含有违法违规内容。 请求方式 POST
-        'msgSecCheck'=>'https://api.weixin.qq.com/wxa/msg_sec_check?access_token=WEAPI_ACCESS_TOKEN',
+        'msgSecCheck' => 'https://api.weixin.qq.com/wxa/msg_sec_check?access_token=WEAPI_ACCESS_TOKEN',
         //生成运单 请求方式 POST
-        'addOrder'=>'https://api.weixin.qq.com/cgi-bin/express/business/order/add?access_token=WEAPI_ACCESS_TOKEN',
+        'addOrder' => 'https://api.weixin.qq.com/cgi-bin/express/business/order/add?access_token=WEAPI_ACCESS_TOKEN',
         //取消运单 请求方式 POST
-        'cancelOrder'=>'https://api.weixin.qq.com/cgi-bin/express/business/order/cancel?access_token=WEAPI_ACCESS_TOKEN',
+        'cancelOrder' => 'https://api.weixin.qq.com/cgi-bin/express/business/order/cancel?access_token=WEAPI_ACCESS_TOKEN',
         //获取支持的快递公司列表 请求方式 GET
-        'getAllDelivery'=>'https://api.weixin.qq.com/cgi-bin/express/business/delivery/getall?access_token=WEAPI_ACCESS_TOKEN',
+        'getAllDelivery' => 'https://api.weixin.qq.com/cgi-bin/express/business/delivery/getall?access_token=WEAPI_ACCESS_TOKEN',
         //获取运单数据 请求方式 POST
-        'getOrder'=>'https://api.weixin.qq.com/cgi-bin/express/business/order/get?access_token=WEAPI_ACCESS_TOKEN',
+        'getOrder' => 'https://api.weixin.qq.com/cgi-bin/express/business/order/get?access_token=WEAPI_ACCESS_TOKEN',
         //查询运单轨迹 请求方式 POST
-        'getPath'=>'https://api.weixin.qq.com/cgi-bin/express/business/path/get?access_token=WEAPI_ACCESS_TOKEN',
+        'getPath' => 'https://api.weixin.qq.com/cgi-bin/express/business/path/get?access_token=WEAPI_ACCESS_TOKEN',
         //获取打印员。若需要使用微信打单 PC 软件，才需要调用 请求方式 GET
-        'getPrinter'=>'https://api.weixin.qq.com/cgi-bin/express/business/printer/getall?access_token=WEAPI_ACCESS_TOKEN',
+        'getPrinter' => 'https://api.weixin.qq.com/cgi-bin/express/business/printer/getall?access_token=WEAPI_ACCESS_TOKEN',
         //获取电子面单余额。仅在使用加盟类快递公司时，才可以调用 请求方式 POST
-        'getQuota'=>'https://api.weixin.qq.com/cgi-bin/express/business/quota/get?access_token=WEAPI_ACCESS_TOKEN',
+        'getQuota' => 'https://api.weixin.qq.com/cgi-bin/express/business/quota/get?access_token=WEAPI_ACCESS_TOKEN',
         //更新打印员。若需要使用微信打单 PC 软件，才需要调用 请求方式 POST
-        'updatePrinter'=>'https://api.weixin.qq.com/cgi-bin/express/business/printer/update?access_token=WEAPI_ACCESS_TOKEN',
+        'updatePrinter' => 'https://api.weixin.qq.com/cgi-bin/express/business/printer/update?access_token=WEAPI_ACCESS_TOKEN',
         /**
          * 微信小程序API START
          */
@@ -647,49 +647,49 @@ class Api
          * 微信支付 API START
          */
         //微信统一下单接口
-        'unifiedOrder'=>'https://api.mch.weixin.qq.com/pay/unifiedorder',
+        'unifiedOrder' => 'https://api.mch.weixin.qq.com/pay/unifiedorder',
         //微信查询订单接口
-        'orderQuery'=>'https://api.mch.weixin.qq.com/pay/orderquery',
+        'orderQuery' => 'https://api.mch.weixin.qq.com/pay/orderquery',
         //关闭订单接口
-        'closeOrder'=>'https://api.mch.weixin.qq.com/pay/closeorder',
+        'closeOrder' => 'https://api.mch.weixin.qq.com/pay/closeorder',
         //申请退款
-        'refund'=>'https://api.mch.weixin.qq.com/secapi/pay/refund',
+        'refund' => 'https://api.mch.weixin.qq.com/secapi/pay/refund',
         //查询退款
-        'refundQuery'=>'https://api.mch.weixin.qq.com/pay/refundquery',
+        'refundQuery' => 'https://api.mch.weixin.qq.com/pay/refundquery',
         //下载对账单
-        'downloadBill'=>'https://api.mch.weixin.qq.com/pay/downloadbill',
+        'downloadBill' => 'https://api.mch.weixin.qq.com/pay/downloadbill',
         //刷卡支付 提交被扫支付API
-        'micropay'=>'https://api.mch.weixin.qq.com/pay/micropay',
+        'micropay' => 'https://api.mch.weixin.qq.com/pay/micropay',
         //刷卡支付 撤销订单
-        'reverse'=>'https://api.mch.weixin.qq.com/secapi/pay/reverse',
+        'reverse' => 'https://api.mch.weixin.qq.com/secapi/pay/reverse',
         //测速上报
-        'report'=>'https://api.mch.weixin.qq.com/payitil/report',
+        'report' => 'https://api.mch.weixin.qq.com/payitil/report',
         //刷卡支付 授权码查询openid
-        'AuthCode'=>'https://api.mch.weixin.qq.com/tools/authcodetoopenid',
+        'AuthCode' => 'https://api.mch.weixin.qq.com/tools/authcodetoopenid',
         //拉取订单评价数据
-        'OrderComment'=>'https://api.mch.weixin.qq.com/billcommentsp/batchquerycomment',
+        'OrderComment' => 'https://api.mch.weixin.qq.com/billcommentsp/batchquerycomment',
         //发放代金券
-        'coupon'=>'https://api.mch.weixin.qq.com/mmpaymkttransfers/send_coupon',
+        'coupon' => 'https://api.mch.weixin.qq.com/mmpaymkttransfers/send_coupon',
         //查询代金券批次
-        'queryStock'=>'https://api.mch.weixin.qq.com/mmpaymkttransfers/query_coupon_stock',
+        'queryStock' => 'https://api.mch.weixin.qq.com/mmpaymkttransfers/query_coupon_stock',
         //查询代金券信息
-        'queryInfo'=>'https://api.mch.weixin.qq.com/mmpaymkttransfers/query_coupon_stock',
+        'queryInfo' => 'https://api.mch.weixin.qq.com/mmpaymkttransfers/query_coupon_stock',
         //发放红包
-        'RedPack'=>'https://api.mch.weixin.qq.com/mmpaymkttransfers/sendredpack',
+        'RedPack' => 'https://api.mch.weixin.qq.com/mmpaymkttransfers/sendredpack',
         //发放裂变红包
-        'GroupRedPack'=>'https://api.mch.weixin.qq.com/mmpaymkttransfers/sendgroupredpack',
+        'GroupRedPack' => 'https://api.mch.weixin.qq.com/mmpaymkttransfers/sendgroupredpack',
         //查询红包记录
-        'queryRedPack'=>'https://api.mch.weixin.qq.com/mmpaymkttransfers/gethbinfo',
+        'queryRedPack' => 'https://api.mch.weixin.qq.com/mmpaymkttransfers/gethbinfo',
         //企业付款到零钱
-        'Transfers'=>'https://api.mch.weixin.qq.com/mmpaymkttransfers/promotion/transfers',
+        'Transfers' => 'https://api.mch.weixin.qq.com/mmpaymkttransfers/promotion/transfers',
         //查询企业付款到零钱
-        'queryTransfers'=>'https://api.mch.weixin.qq.com/mmpaymkttransfers/gettransferinfo',
+        'queryTransfers' => 'https://api.mch.weixin.qq.com/mmpaymkttransfers/gettransferinfo',
         //企业付款到银行卡
-        'TransfersBank'=>'https://api.mch.weixin.qq.com/mmpaysptrans/pay_bank',
+        'TransfersBank' => 'https://api.mch.weixin.qq.com/mmpaysptrans/pay_bank',
         //商户企业付款到银行卡操作进行结果查询
-        'queryTransfersBank'=>'https://api.mch.weixin.qq.com/mmpaysptrans/query_bank',
+        'queryTransfersBank' => 'https://api.mch.weixin.qq.com/mmpaysptrans/query_bank',
         //获取文件签名
-        'getRsaContent'=>'https://fraud.mch.weixin.qq.com/risk/getpublickey'
+        'getRsaContent' => 'https://fraud.mch.weixin.qq.com/risk/getpublickey'
         /**
          *微信支付 API END
          */
@@ -701,6 +701,11 @@ class Api
     public $callback_run;
     //数据类型
     private $type = 'json';
+
+    /**
+     * @var Curl 类库
+     */
+    private $curl;
 
 
     /**
@@ -735,19 +740,31 @@ class Api
      * @return $this
      * 微信 post请求
      */
-    public function post(array $options, $type = 'json')
+    public function post(array $options=[], $type = 'json')
     {
 
         $this->type = $type;
         if ($this->type == 'json') {
-
             $options = \Driver\third\Tool::arr2json($options);
         } else {
             $options = \Driver\third\Tool::arr2xml($options);
         }
-        $this->data =  Curl::instance()->register_url(self::$url)->post($options);
+        if (empty($this->curl)) $this->curl = Curl::instance();
+        $this->data = $this->curl->register_url(self::$url)->post($options);
         return $this;
     }
+
+    /**
+     * @param $ssl_cer
+     * @param $ssl_key
+     * 配置ssl
+     */
+    public function ssl($ssl_cer, $ssl_key)
+    {
+        $this->curl = Curl::instance()->ssl($ssl_cer, $ssl_key);
+        return $this;
+    }
+
 
     /**
      * @param $file
@@ -762,7 +779,9 @@ class Api
         $this->data = Curl::instance()->register_url(self::$url)->post($options);
         return $this;
     }
-    public function curl(){
+
+    public function curl()
+    {
         return Curl::instance();
     }
 
@@ -790,6 +809,7 @@ class Api
     {
         return self::$url;
     }
+
     /**
      * @param $url
      * @param $config
@@ -799,8 +819,8 @@ class Api
     private function url2apiurl($url, $config)
     {
 
-        $link_url=empty($config['link_url'])?'':$config['link_url'];
-        $url=$url.$link_url;
+        $link_url = empty($config['link_url']) ? '' : $config['link_url'];
+        $url = $url . $link_url;
         if (strpos($url, '?') === false) return $url;
         $start_url = substr($url, 0, strrpos($url, '?'));
         $end_url = strstr($url, '?');

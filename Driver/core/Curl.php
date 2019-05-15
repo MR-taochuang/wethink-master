@@ -30,6 +30,12 @@ class Curl
      * curl实例对象
      */
     private static $curl = null;
+
+    /**
+     * @var array
+     * 设置的curl
+     */
+    private static $set=[];
     /**
      * @var
      * 请求地址
@@ -59,6 +65,9 @@ class Curl
         curl_setopt(self::$curl, CURLOPT_RETURNTRANSFER, true);
         curl_setopt(self::$curl, CURLOPT_SSL_VERIFYPEER, self::$config['VERIFYPEER']);
         curl_setopt(self::$curl, CURLOPT_SSL_VERIFYHOST, self::$config['VERIFYHOST']);
+        foreach(self::$set as $maps){
+            curl_setopt(self::$curl, $maps[0], $maps[1]);
+        }
     }
 
     /**
@@ -78,7 +87,7 @@ class Curl
      */
     public function header($header)
     {
-        curl_setopt(self::$curl, CURLOPT_HTTPHEADER, $header);
+        array_push(self::$set,[CURLOPT_HTTPHEADER, $header]);
         return $this;
     }
 
@@ -111,9 +120,9 @@ class Curl
      */
     public function post($param = [])
     {
-        curl_setopt(self::$curl, CURLOPT_POST, true);
-        curl_setopt(self::$curl, CURLOPT_POSTFIELDS, Tool::_buildHttpData($param));
-
+        foreach([[CURLOPT_POST, true],[CURLOPT_POSTFIELDS, Tool::_buildHttpData($param)]] as $maps){
+            array_push(self::$set,$maps);
+        }
         return self::query();
     }
 
@@ -124,8 +133,9 @@ class Curl
      */
     public function proxy($Host, $Port)
     {
-        curl_setopt(self::$curl, CURLOPT_PROXY, $Host);
-        curl_setopt(self::$curl, CURLOPT_PROXYPORT, $Port);
+        foreach([[CURLOPT_PROXY, $Host],[CURLOPT_PROXYPORT, $Port]] as $maps){
+            array_push(self::$set,$maps);
+        }
         return $this;
     }
 
@@ -136,10 +146,9 @@ class Curl
      */
     public function ssl($ssl_cer, $ssl_key)
     {
-        curl_setopt(self::$curl, CURLOPT_SSLCERTTYPE, self::$config['SSLCERTTYPE']);
-        curl_setopt(self::$curl, CURLOPT_SSLCERT, $ssl_cer);
-        curl_setopt(self::$curl, CURLOPT_SSLKEYTYPE, self::$config['SSLKEYTYPE']);
-        curl_setopt(self::$curl, CURLOPT_SSLKEY, $ssl_key);
+        foreach([[CURLOPT_SSLCERTTYPE, self::$config['SSLCERTTYPE']],[CURLOPT_SSLCERT, $ssl_cer],[CURLOPT_SSLKEYTYPE, self::$config['SSLKEYTYPE']],[CURLOPT_SSLKEY, $ssl_key]] as $maps){
+            array_push(self::$set,$maps);
+        }
         return $this;
     }
 
@@ -150,7 +159,7 @@ class Curl
      */
     public function useragent($agent)
     {
-        curl_setopt(self::$curl, CURLOPT_USERAGENT, $agent);
+        array_push(self::$set,[CURLOPT_USERAGENT, $agent]);
         return $this;
     }
 

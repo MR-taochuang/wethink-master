@@ -49,7 +49,7 @@ class Api extends Wechat{
         self::WepayWe()->doParam($options,$type);
         $ssl_cer=self::$config['ssl_cer'];
         $ssl_key=self::$config['ssl_key'];
-        return self::instance(__FUNCTION__)->run()->curl()->ssl($ssl_cer,$ssl_key)->post($options,'xml')->toArray();
+        return self::instance(__FUNCTION__)->run()->ssl($ssl_cer,$ssl_key)->post($options,'xml')->toArray();
     }
 
     /**
@@ -74,7 +74,7 @@ class Api extends Wechat{
         if ($type == 'weapi') $field = 'weapiappid';
         $options['appid'] = self::$config[$field];
         $options['mch_id']=self::$config['mch_id'];
-        $options['nonce_str']=Register::tool()->createNoncestr();
+        $options['nonce_str']=Register::third()->tool()->createNoncestr();
         $options['sign']=self::WepayWe()->get_pay_sign($options);
         return self::instance(__FUNCTION__)->run()->post($options,'xml')->toArray();
     }
@@ -91,7 +91,7 @@ class Api extends Wechat{
         if ($type == 'weapi') $field = 'weapiappid';
         $options['appid'] = self::$config[$field];
         $options['mch_id']=self::$config['mch_id'];
-        $options['nonce_str']=Register::tool()->createNoncestr();
+        $options['nonce_str']=Register::third()->tool()->createNoncestr();
         $options['sign']=self::WepayWe()->get_pay_sign($options);
         return self::instance(__FUNCTION__)->run()->post($options,'xml')->toArray();
     }
@@ -104,7 +104,7 @@ class Api extends Wechat{
     public function reverse(array $options){
         $ssl_cer=self::$config['ssl_cer'];
         $ssl_key=self::$config['ssl_key'];
-        return self::instance(__FUNCTION__)->run()->curl()->ssl($ssl_cer,$ssl_key)->post($options,'xml')->toArray();
+        return self::instance(__FUNCTION__)->run()->ssl($ssl_cer,$ssl_key)->post($options,'xml')->toArray();
     }
 
     /**
@@ -151,7 +151,7 @@ class Api extends Wechat{
         self::WepayWe()->doParam($options,$type);
         $ssl_cer=self::$config['ssl_cer'];
         $ssl_key=self::$config['ssl_key'];
-        return self::instance(__FUNCTION__)->run()->curl()->ssl($ssl_cer,$ssl_key)->post($options,'xml')->toArray();
+        return self::instance(__FUNCTION__)->run()->ssl($ssl_cer,$ssl_key)->post($options,'xml')->toArray();
     }
 
     /**
@@ -182,10 +182,10 @@ class Api extends Wechat{
      * 发放普通红包
      */
     public function RedPack(array $options,$type='wechat'){
-        self::WepayWe()->doParam($options,$type);
+        self::WepayWe()->doSign($options);
         $ssl_cer=self::$config['ssl_cer'];
         $ssl_key=self::$config['ssl_key'];
-        return self::instance(__FUNCTION__)->run()->curl()->ssl($ssl_cer,$ssl_key)->post($options,'xml')->toArray();
+        return self::instance(__FUNCTION__)->run()->ssl($ssl_cer,$ssl_key)->post($options,'xml')->toArray();
     }
 
     /**
@@ -198,7 +198,7 @@ class Api extends Wechat{
         self::WepayWe()->doParam($options,$type);
         $ssl_cer=self::$config['ssl_cer'];
         $ssl_key=self::$config['ssl_key'];
-        return self::instance(__FUNCTION__)->run()->curl()->ssl($ssl_cer,$ssl_key)->post($options,'xml')->toArray();
+        return self::instance(__FUNCTION__)->run()->ssl($ssl_cer,$ssl_key)->post($options,'xml')->toArray();
     }
 
     /**
@@ -211,7 +211,7 @@ class Api extends Wechat{
         self::WepayWe()->doParam($options,$type);
         $ssl_cer=self::$config['ssl_cer'];
         $ssl_key=self::$config['ssl_key'];
-        return self::instance(__FUNCTION__)->run()->curl()->ssl($ssl_cer,$ssl_key)->post($options,'xml')->toArray();
+        return self::instance(__FUNCTION__)->run()->ssl($ssl_cer,$ssl_key)->post($options,'xml')->toArray();
 
     }
 
@@ -227,7 +227,7 @@ class Api extends Wechat{
         self::WepayWe()->doParam($options,$type);
         $ssl_cer=self::$config['ssl_cer'];
         $ssl_key=self::$config['ssl_key'];
-        return self::instance(__FUNCTION__)->run()->curl()->ssl($ssl_cer,$ssl_key)->post($options,'xml')->toArray();
+        return self::instance(__FUNCTION__)->run()->ssl($ssl_cer,$ssl_key)->post($options,'xml')->toArray();
 
     }
 
@@ -244,7 +244,7 @@ class Api extends Wechat{
         self::WepayWe()->doParam($options,$type);
         $ssl_cer=self::$config['ssl_cer'];
         $ssl_key=self::$config['ssl_key'];
-        return self::instance(__FUNCTION__)->run()->curl()->ssl($ssl_cer,$ssl_key)->post($options,'xml')->toArray();
+        return self::instance(__FUNCTION__)->run()->ssl($ssl_cer,$ssl_key)->post($options,'xml')->toArray();
     }
 
     /**
@@ -258,7 +258,7 @@ class Api extends Wechat{
         self::WepayWe()->doParam($options,$type);
         $ssl_cer=self::$config['ssl_cer'];
         $ssl_key=self::$config['ssl_key'];
-        return self::instance(__FUNCTION__)->run()->curl()->ssl($ssl_cer,$ssl_key)->post($options,'xml')->toArray();
+        return self::instance(__FUNCTION__)->run()->ssl($ssl_cer,$ssl_key)->post($options,'xml')->toArray();
 
 
     }
@@ -274,7 +274,7 @@ class Api extends Wechat{
         self::WepayWe()->doParam($options);
         $ssl_cer=self::$config['ssl_cer'];
         $ssl_key=self::$config['ssl_key'];
-        return self::instance(__FUNCTION__)->run()->curl()->ssl($ssl_cer,$ssl_key)->post($options,'xml')->toArray();
+        return self::instance(__FUNCTION__)->run()->ssl($ssl_cer,$ssl_key)->post($options,'xml')->toArray();
     }
 
 }
